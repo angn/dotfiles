@@ -1,0 +1,27 @@
+git config --global color.ui auto
+
+git config --global pretty.tree 'format:%C(yellow)%h %Cgreen%an %Cblue%ar%Cred%d %Creset %s'
+
+git config --global alias.h help
+git config --global alias.up 'pull --ff-only --all'
+git config --global alias.co checkout
+git config --global alias.st 'status -sb'
+git config --global alias.br branch
+git config --global alias.ad 'add -A'
+git config --global alias.ci 'commit -a'
+git config --global alias.lg 'log --pretty=tree --graph --decorate -20'
+git config --global alias.re 'rebase -i'
+git config --global alias.di diff
+git config --global alias.k '!gitk --all'
+
+# msysgit
+git config --global i18n.logOutputEncoding cp949
+
+# windows gvim
+git config --global core.editor c:/vim73/gvim.exe
+git config --global diff.tool vimdiff
+git config --global mergetool.vimdiff.path c:/vim73/gvim.exe
+
+# windows kdiff3
+git config --global merge.tool kdiff3
+git config --global mergetool.kdiff3.path /c/kdiff3/kdiff3.exe
