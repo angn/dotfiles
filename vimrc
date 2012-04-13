@@ -26,11 +26,11 @@ im <c-space> <c-p>
 
 nm #2 :w<cr>
 nm #3 :E<cr>
-nm #4 :q<cr>
-nm #5 :!sh %<cr>
+nm #4 :clo<cr>
+nm #5 :silent !%<cr>
 nm #6 :noh<cr>
-nm #7 :mak<cr>
-nm #8 <nop>
+nm #7 :mak!<cr><cr>
+nm #8 :Ve<cr>
 nm #9 :set paste!<cr>
 nm #0 <nop>
 nm <f11> :cN<cr>
