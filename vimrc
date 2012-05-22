@@ -1,14 +1,18 @@
-sy on
+nm <m-space> :simalt ~<cr>
+set noimd imi=1 ims=-1
+"source $VIMRUNTIME/delmenu.vim
+set go-=T gfn=Consolas:h11 ru
 
 " http://www.vim.org/scripts/script.php?script_id=2776
 " http://www.vim.org/scripts/script.php?script_id=3436
 
-set bg=dark
-set ai si et ts=4 sw=4 sts=4
-set bs=indent,eol ic noea
-set ffs=unix,dos fencs=utf-8,cp949,latin1,ascii
+sy on
+"colo twilight
+set ai si noet ts=4 sw=4 sts=0 bs=indent,eol ic
+set noswf ffs=unix,dos fencs=utf-8,cp949,latin1,ascii
 set pa=.,./*,./*/*
-set wiw=80
+set wiw=80 noea
+let g:netrw_preview=1
 
 im #1 <nop>
 im #2 <c-o>:w<cr>
