@@ -19,6 +19,9 @@ git config --global alias.k '!gitk --all'
 # windows gvim
 git config --global core.editor C:/vim73/gvim.exe
 
+# gvimdiff
+git config --global diff.tool gvimdiff
+
 # kdiff3
 git config --global merge.tool kdiff3
 git config --global mergetool.kdiff3.path 'C:/Program Files (x86)/KDiff3/kdiff3.exe'
