@@ -1,16 +1,15 @@
 nm <m-space> :simalt ~<cr>
 set noimd imi=1 ims=-1
 "source $VIMRUNTIME/delmenu.vim
-set go-=T gfn=Consolas:h11 ru
+set go-=T gfn=Consolas:h11 ru nu
 
-" http://www.vim.org/scripts/script.php?script_id=2776
-" http://www.vim.org/scripts/script.php?script_id=3436
+" http://www.vim.org/scripts/script.php?script_id=1677
 
 sy on
 "colo twilight
 set ai si noet ts=4 sw=4 sts=0 bs=indent,eol ic
 set noswf ffs=unix,dos fencs=utf-8,cp949,latin1,ascii
-set pa=.,./*,./*/*
+set pa=.,./*,./*/*,./*/*/*
 set wiw=80 noea
 let g:netrw_preview=1
 
