@@ -29,6 +29,7 @@ h1 {
 h1 span {
     display: inline-block;
 }
+
 h1 span:nth-child(1) { -webkit-animation: ANI1 1.5s ease-out }
 h1 span:nth-child(2) { -webkit-animation: ANI2 1.5s ease-out }
 h1 span:nth-child(3) { -webkit-animation: ANI3 1.5s ease-out }
@@ -59,6 +60,7 @@ h1 span:nth-child(6) { -webkit-animation: ANI6 1.5s ease-out }
     0% { opacity: 0 }
     30% { opacity: 0; -webkit-transform: translate(9em, -4em) rotate(-400deg) }
 }
+
 h1 span:nth-child(1) { -moz-animation: ANI1 1.5s ease-out }
 h1 span:nth-child(2) { -moz-animation: ANI2 1.5s ease-out }
 h1 span:nth-child(3) { -moz-animation: ANI3 1.5s ease-out }
@@ -89,6 +91,38 @@ h1 span:nth-child(6) { -moz-animation: ANI6 1.5s ease-out }
     0% { opacity: 0 }
     30% { opacity: 0; -moz-transform: translate(9em, -4em) rotate(-400deg) }
 }
+
+h1 span:nth-child(1) { -ms-animation: ANI1 1.5s ease-out }
+h1 span:nth-child(2) { -ms-animation: ANI2 1.5s ease-out }
+h1 span:nth-child(3) { -ms-animation: ANI3 1.5s ease-out }
+h1 span:nth-child(4) { -ms-animation: ANI4 1.5s ease-out }
+h1 span:nth-child(5) { -ms-animation: ANI5 1.5s ease-out }
+h1 span:nth-child(6) { -ms-animation: ANI6 1.5s ease-out }
+@-ms-keyframes ANI1 {
+    0% { opacity: 0 }
+    30% { opacity: 0; -ms-transform: translate(-9em, -4em) rotate(300deg) }
+}
+@-ms-keyframes ANI2 {
+    0% { opacity: 0 }
+    30% { opacity: 0; -ms-transform: translate(-5em, -4em) rotate(-200deg) }
+}
+@-ms-keyframes ANI3 {
+    0% { opacity: 0 }
+    30% { opacity: 0; -ms-transform: translate(-2em, -4em) rotate(400deg) }
+}
+@-ms-keyframes ANI4 {
+    0% { opacity: 0 }
+    30% { opacity: 0; -ms-transform: translate(2em, -4em) rotate(-500deg) }
+}
+@-ms-keyframes ANI5 {
+    0% { opacity: 0 }
+    30% { opacity: 0; -ms-transform: translate(5em, -4em) rotate(300deg) }
+}
+@-ms-keyframes ANI6 {
+    0% { opacity: 0 }
+    30% { opacity: 0; -ms-transform: translate(9em, -4em) rotate(-400deg) }
+}
+
 .contact {
     margin: 1em 0;
     font-family: Corbel, Gill Sans, Tahoma, sans-serif;
@@ -97,6 +131,7 @@ h1 span:nth-child(6) { -moz-animation: ANI6 1.5s ease-out }
     letter-spacing: 0.7ex;
     -webkit-animation: POP 2s ease-out;
     -moz-animation: POP 2s ease-out;
+    -ms-animation: POP 2s ease-out;
 }
 @-webkit-keyframes POP {
     0% { -webkit-transform: scale(0) }
@@ -109,6 +144,12 @@ h1 span:nth-child(6) { -moz-animation: ANI6 1.5s ease-out }
     80% { -moz-transform: scale(0) }
     90% { -moz-transform: scale(1.2) }
     100% { -moz-transform: scale(1) }
+}
+@-ms-keyframes POP {
+    0% { -ms-transform: scale(0) }
+    80% { -ms-transform: scale(0) }
+    90% { -ms-transform: scale(1.2) }
+    100% { -ms-transform: scale(1) }
 }
 a {
     text-decoration: none;
@@ -127,6 +168,7 @@ a:hover {
     word-spacing: 1em;
     -webkit-animation: POP 2.5s ease-out;
     -moz-animation: POP 2.5s ease-out;
+    -ms-animation: POP 2.5s ease-out;
 }
 .resource a {
     color: #ddd;
