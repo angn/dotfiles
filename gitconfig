@@ -3,7 +3,7 @@ git config --global color.ui auto
 git config --global pretty.tree 'format:%C(yellow)%h %Cgreen%an %Cblue%ar%Cred%d %Creset %s'
 
 git config --global alias.h help
-git config --global alias.up 'pull --ff-only --all'
+git config --global alias.up 'pull --ff-only'
 git config --global alias.co checkout
 git config --global alias.st 'status -sb'
 git config --global alias.br branch
@@ -14,14 +14,13 @@ git config --global alias.re 'rebase -i'
 git config --global alias.di diff
 git config --global alias.dt difftool
 git config --global alias.mt mergetool
-git config --global alias.k '!gitk --all'
 
 # windows gvim
-git config --global core.editor C:/vim73/gvim.exe
+# git config --global core.editor C:/vim73/gvim.exe
 
 # gvimdiff
-git config --global diff.tool gvimdiff
+# git config --global diff.tool gvimdiff
 
 # kdiff3
-git config --global merge.tool kdiff3
-git config --global mergetool.kdiff3.path 'C:/Program Files (x86)/KDiff3/kdiff3.exe'
+# git config --global merge.tool kdiff3
+# git config --global mergetool.kdiff3.path 'C:/Program Files (x86)/KDiff3/kdiff3.exe'
