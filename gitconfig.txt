@@ -1,22 +1,39 @@
 git config --global rebase.autosquash true
+# git config --global core.autocrlf false
+# echo "* eol=lf" > .gitattributes
 
 git config --global color.ui auto
-
 git config --global pretty.tree 'format:%C(yellow)%h %Cgreen%an %Cblue%ar%Cred%d %Creset %s'
 
 git config --global alias.h help
-git config --global alias.up 'pull --ff-only'
-git config --global alias.co checkout
-git config --global alias.st 'status -sb'
-git config --global alias.br branch
-git config --global alias.ad 'add -A'
-git config --global alias.ci 'commit -a'
-git config --global alias.fix 'commit -a --fixup HEAD'
+
 git config --global alias.lg 'log --pretty=tree --graph --decorate -20'
-git config --global alias.re 'rebase -i'
+# git config --global alias.lg 'log --oneline --graph --decorate -20'
+git config --global alias.lga 'log --pretty=tree --graph --decorate -20 --all'
+git config --global alias.st 'status -sb'
 git config --global alias.di diff
+git config --global alias.dc 'diff --cached'
 git config --global alias.dt difftool
 git config --global alias.mt mergetool
+
+git config --global alias.remotes 'remote -v'
+git config --global alias.origin 'remote add -f --tags origin'
+git config --global alias.up 'pull --ff-only'
+
+git config --global alias.co checkout
+git config --global alias.cb 'checkout -b'
+git config --global alias.br branch
+git config --global alias.ba 'branch -a'
+git config --global alias.bd 'branch -D'
+git config --global alias.ad 'add -A'
+
+git config --global alias.ci 'commit -a'
+git config --global alias.cii 'commit --interative'
+git config --global alias.reword 'commit --amend'
+git config --global alias.fix 'commit -a --fixup HEAD'
+git config --global alias.re 'rebase -i'
+git config --global alias.pick 'cherry-pick --ff'
+git config --global alias.undo 'reset HEAD@{1}'
 
 # windows gvim
 # git config --global core.editor C:/vim73/gvim.exe
