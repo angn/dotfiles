@@ -18,7 +18,7 @@ git config --global alias.dt difftool
 git config --global alias.mt mergetool
 
 git config --global alias.remotes 'remote -v'
-git config --global alias.origin 'remote add -f --tags origin'
+git config --global alias.origin 'remote add -f origin'
 git config --global alias.up 'pull --ff-only'
 
 git config --global alias.co checkout
