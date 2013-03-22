@@ -1,0 +1,4 @@
+unbind C-b
+set-option -g prefix F12
+bind-key F12 send-prefix
+set-option -g base-index 1
