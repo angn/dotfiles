@@ -12,8 +12,8 @@ git config --global alias.lg 'log --oneline --graph --decorate -20'
 git config --global alias.lga 'log --oneline --graph --decorate -20 --all'
 # git config --global alias.lga 'log --pretty=tree --graph --decorate -20 --all'
 git config --global alias.st 'status -sb'
-git config --global alias.di 'diff -M -C'
-git config --global alias.dc 'diff --cached -M -C'
+git config --global alias.di 'diff -M -C -b'
+git config --global alias.dic 'diff --cached -M -C -b'
 git config --global alias.dt difftool
 git config --global alias.mt mergetool
 
