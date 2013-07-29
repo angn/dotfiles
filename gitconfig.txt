@@ -6,10 +6,12 @@ git config --global pretty.tree 'format:%C(yellow)%h %Cgreen%an %Cblue%ar%Cred%d
 
 git config --global alias.h help
 
+git config --global alias.l 'log --oneline --graph --decorate -20'
 git config --global alias.lg 'log --oneline --graph --decorate -20'
 # git config --global alias.lg 'log --pretty=tree --graph --decorate -20'
 git config --global alias.lga 'log --oneline --graph --decorate -20 --all'
 # git config --global alias.lga 'log --pretty=tree --graph --decorate -20 --all'
+git config --global alias.s 'status -sb'
 git config --global alias.st 'status -sb'
 git config --global alias.di 'diff -M -C -b'
 git config --global alias.dic 'diff --cached -M -C -b'
@@ -19,10 +21,13 @@ git config --global alias.mt mergetool
 git config --global alias.up 'pull --ff-only'
 
 git config --global alias.co checkout
-git config --global alias.br branch
-git config --global alias.ad 'add -A'
+git config --global alias.b branch
 
-git config --global alias.ci 'commit -a'
+git config --global alias.a add
+git config --global alias.ad 'add -A'
+git config --global alias.ap 'add -p'
+git config --global alias.ci commit
+git config --global alias.cia 'commit -a'
 git config --global alias.fix 'commit --fixup HEAD'
 git config --global alias.re 'rebase -i --autosquash'
 git config --global alias.pick 'cherry-pick --ff'
