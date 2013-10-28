@@ -2,6 +2,12 @@
 	"color_scheme": "Packages/Color Scheme - Default/Twilight.tmTheme",
 	"default_line_ending": "unix",
 	"font_size": 11,
-	"rulers": [78, 80]
+	"rulers": [78]
 }
-// https://raw.github.com/icrowley/st2_packages/master/Missing%20Palette%20Commands/Missing.sublime-commands
+// https://sublime.wbond.net/installation
+[
+	{ "keys": ["super+."], "command": "auto_complete" },
+	{ "keys": ["super+k", "super+2"], "command": "set_setting", "args": {"setting": "tab_size", "value": 2} },
+	{ "keys": ["super+k", "super+4"], "command": "set_setting", "args": {"setting": "tab_size", "value": 4} },
+	{ "keys": ["super+k", "super+r"], "command": "reveal_in_side_bar" }
+]
