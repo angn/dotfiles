@@ -29,12 +29,12 @@ h1 span {
     display: inline-block;
 }
 
-h1 span:nth-child(1) { -webkit-animation: ANI1 1.5s ease-out }
-h1 span:nth-child(2) { -webkit-animation: ANI2 1.5s ease-out }
-h1 span:nth-child(3) { -webkit-animation: ANI3 1.5s ease-out }
-h1 span:nth-child(4) { -webkit-animation: ANI4 1.5s ease-out }
-h1 span:nth-child(5) { -webkit-animation: ANI5 1.5s ease-out }
-h1 span:nth-child(6) { -webkit-animation: ANI6 1.5s ease-out }
+h1 span:nth-child(1) { -webkit-animation: ANI1 1.5s ease-out forwards }
+h1 span:nth-child(2) { -webkit-animation: ANI2 1.5s ease-out forwards }
+h1 span:nth-child(3) { -webkit-animation: ANI3 1.5s ease-out forwards }
+h1 span:nth-child(4) { -webkit-animation: ANI4 1.5s ease-out forwards }
+h1 span:nth-child(5) { -webkit-animation: ANI5 1.5s ease-out forwards }
+h1 span:nth-child(6) { -webkit-animation: ANI6 1.5s ease-out forwards }
 @-webkit-keyframes ANI1 {
     0% { opacity: 0 }
     30% { opacity: 0; -webkit-transform: translate(-9em, -4em) rotate(300deg) }
@@ -60,12 +60,12 @@ h1 span:nth-child(6) { -webkit-animation: ANI6 1.5s ease-out }
     30% { opacity: 0; -webkit-transform: translate(9em, -4em) rotate(-400deg) }
 }
 
-h1 span:nth-child(1) { animation: ANI1 1.5s ease-out }
-h1 span:nth-child(2) { animation: ANI2 1.5s ease-out }
-h1 span:nth-child(3) { animation: ANI3 1.5s ease-out }
-h1 span:nth-child(4) { animation: ANI4 1.5s ease-out }
-h1 span:nth-child(5) { animation: ANI5 1.5s ease-out }
-h1 span:nth-child(6) { animation: ANI6 1.5s ease-out }
+h1 span:nth-child(1) { animation: ANI1 1.5s ease-out forwards }
+h1 span:nth-child(2) { animation: ANI2 1.5s ease-out forwards }
+h1 span:nth-child(3) { animation: ANI3 1.5s ease-out forwards }
+h1 span:nth-child(4) { animation: ANI4 1.5s ease-out forwards }
+h1 span:nth-child(5) { animation: ANI5 1.5s ease-out forwards }
+h1 span:nth-child(6) { animation: ANI6 1.5s ease-out forwards }
 @keyframes ANI1 {
     0% { opacity: 0 }
     30% { opacity: 0; transform: translate(-9em, -4em) rotate(300deg) }
@@ -97,8 +97,8 @@ h1 span:nth-child(6) { animation: ANI6 1.5s ease-out }
     font-weight: 100;
     font-size: 12pt;
     letter-spacing: 0.7ex;
-    -webkit-animation: POP 2s ease-out;
-    animation: POP 2s ease-out;
+    -webkit-animation: POP 2s ease-out forwards;
+    animation: POP 2s ease-out forwards;
 }
 @-webkit-keyframes POP {
     0% { -webkit-transform: scale(0) }
@@ -128,8 +128,8 @@ a:hover {
     font-weight: 100;
     font-size: 10pt;
     word-spacing: 1em;
-    -webkit-animation: POP 2.5s ease-out;
-    animation: POP 2.5s ease-out;
+    -webkit-animation: POP 2.5s ease-out forwards;
+    animation: POP 2.5s ease-out forwards;
 }
 .resource a {
     color: #ddd;
