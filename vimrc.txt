@@ -7,6 +7,7 @@ set go-=T gfn=Consolas:h11 ru nu
 
 sy on
 "colo twilight
+set bg=dark
 set ai si noet ts=4 sw=4 sts=0 bs=indent,eol ic
 set noswf ffs=unix,dos fencs=utf-8,cp949,latin1,ascii
 set pa=.,./*,./*/*,./*/*/*
