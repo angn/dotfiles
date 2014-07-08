@@ -1,19 +1,18 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<meta name=viewport content="initial-scale=1.0,minimum-scale=1.0,width=device-width">
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1,minimum-scale=1">
 <title>holies</title>
 <style>
 body {
-    overflow: hidden;
-    margin: 5em 1em;
-    background: #328AAE;
+    margin: 4em;
+    background: #328aae;
     color: #fff;
     text-align: center;
-    line-height: 2;
     text-shadow: 0 2px 2px rgba(0,0,0,0.5);
     -webkit-text-size-adjust: none;
+    font: 400 100%/2 Corbel, Gill Sans, Tahoma, sans-serif;
 }
 @media only screen and (max-height: 480px) {
     body {
@@ -21,9 +20,7 @@ body {
     }
 }
 h1 {
-    font-family: Jokerman, Party LET, Comic Sans MS, Verdana, sans-serif;
-    font-weight: bolder;
-    font-size: 400%;
+    font: 700 400%/2 Jokerman, Party LET, Comic Sans MS, Verdana, sans-serif;
     letter-spacing: 0.1ex;
 }
 h1 span {
@@ -92,25 +89,14 @@ h1 span:nth-child(6) { animation: ANI6 1.5s ease-out forwards }
     30% { opacity: 0; transform: translate(9em, -4em) rotate(-400deg) }
 }
 
-.contact {
-    margin: 1em 0;
-    font-family: Corbel, Gill Sans, Tahoma, sans-serif;
-    font-weight: 100;
-    font-size: 12pt;
-    letter-spacing: 0.7ex;
-    -webkit-animation: POP 2s ease-out forwards;
-    animation: POP 2s ease-out forwards;
-}
 @-webkit-keyframes POP {
     0% { -webkit-transform: scale(0) }
-    80% { -webkit-transform: scale(0) }
-    90% { -webkit-transform: scale(1.2) }
+    50% { -webkit-transform: scale(1.2) }
     100% { -webkit-transform: scale(1) }
 }
 @keyframes POP {
     0% { transform: scale(0) }
-    80% { transform: scale(0) }
-    90% { transform: scale(1.2) }
+    50% { transform: scale(1.2) }
     100% { transform: scale(1) }
 }
 a {
@@ -122,39 +108,35 @@ a:hover {
     top: -1px;
     text-shadow: 0 3px 3px rgba(0,0,0,0.5);
 }
+p {
+	max-width: 25em;
+    margin: 4em auto;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+    -webkit-animation: POP .5s ease-out 1.3s forwards;
+    animation: POP .5s ease-out 1.3s forwards;
+}
 .resource {
-    margin: 5em 0;
-    font-family: Corbel, Gill Sans, Tahoma, sans-serif;
-    font-weight: 100;
-    font-size: 10pt;
     word-spacing: 1em;
-    -webkit-animation: POP 2.5s ease-out forwards;
-    animation: POP 2.5s ease-out forwards;
 }
-.resource a {
-    color: #ddd;
-}
-.resource a:hover {
-    color: #fff;
+.code {
+    -webkit-animation-delay: 1.6s;
+    animation-delay: 1.6s;
 }
 </style>
 </head>
 <body>
 <h1><span>h</span><span>o</span><span>l</span><span>i</span><span>e</span><span>s</span></h1>
-<p class="contact">
-    <a href="https://twitter.com/graciasa">@graciasa</a><br>
-    <small>holies&#64;timetabl&#46;com</small><br>
-    <small><a href="https://github.com/holies">holies @ GitHub</a></small>
-</p>
 <p class="resource">
     <a href="checker.html">checker.html</a>
     <a href="gitconfig.txt">gitconfig.txt</a>
     <a href="sublime.js">sublime.js</a>
-	<br>
     <a href="putty-tango.reg">putty-tango.reg</a>
     <a href="vimrc.txt">vimrc.txt</a>
     <a href="flowers.jpg">flowers.jpg</a>
     <a href="tangocmd.reg">tangocmd.reg</a>
 </p>
+<p class="code">cp /usr/share/zoneinfo/Asia/Seoul /etc/localtime</p>
 </body>
 </html>
+
