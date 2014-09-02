@@ -31,7 +31,7 @@ im #6 <nop>
 im #7 <nop>
 im #8 <nop>
 im #9 <nop>
-im #0 <nop>
+im #0 <esc>:
 im <f11> <c-p>
 im <f12> <c-n>
 
@@ -47,6 +47,7 @@ nm #3 :call HandleF3()<cr>
 nm #4 :q<cr>
 nm #6 :noh<cr>
 nm #9 :set paste!<cr>
+nm #0 :
 nm <f11> :cN<cr>
 nm <f12> :cn<cr>
 
