@@ -17,10 +17,10 @@ if &t_Co >= 256
   colo slate
 endif
 let g:netrw_preview=1
-set bg=dark wiw=80 noea
+set bg=dark wh=3 wmw=20 wiw=80 noea so=1 siso=8
 set ai si noet ts=4 sw=4 sts=0 bs=indent,eol ic is
 set noswf ffs=unix,dos enc=utf-8 fencs=utf-8,cp949,latin1,ascii
-set pa=.,./*,./*/*,./*/*/*
+set pa=.,./*,./*/*,./*/*/* wmnu
 
 im #1 <nop>
 im #2 <c-o>:w<cr>
