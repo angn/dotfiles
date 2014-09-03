@@ -1,5 +1,4 @@
 silent! execute pathogen#infect()
-let NERDTreeDirArrows=0
 
 if has("autocmd")
   filetype plugin indent on
