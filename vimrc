@@ -37,8 +37,8 @@ im <f12> <c-n>
 
 nm #2 :w<cr>
 function! HandleF3()
-  if exists(':NERDTree')
-    :NERDTree
+  if exists(':NERDTreeFocus')
+    :NERDTreeFocus
   else
     :Vexplore
   endif
