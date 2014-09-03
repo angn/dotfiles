@@ -1,3 +1,10 @@
+" cd /usr/share/vim/vim7?/autoload
+" curl -sSLO https://tpo.pe/pathogen.vim
+" cd ../bundle
+" git clone --depth=1 https://github.com/scrooloose/nerdtree.git
+" git clone --depth=1 https://github.com/tmhedberg/matchit.git
+" git clone --depth=1 https://github.com/kien/ctrlp.vim.git
+
 silent! execute pathogen#infect()
 
 if has("autocmd")
