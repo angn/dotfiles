@@ -15,18 +15,19 @@ if has('gui-win32')
   nm <m-space> :simalt ~<cr>
   set noimd imi=1 ims=-1
   "source $VIMRUNTIME/delmenu.vim
-  set go-=T gfn=Consolas:h11 ru nu
+  set go-=T gfn=Consolas:h11
+  "set gfn=NanumGothicCoding:h12:cHANGEUL
+  colo slate
+elseif &t_Co >= 256
+  colo slate
 endif
 
 sy on
-if &t_Co >= 256
-  colo slate
-endif
 let g:netrw_preview=1
-set bg=dark wh=3 wmw=20 wiw=80 noea so=1 siso=8
-set ai si noet ts=4 sw=4 sts=0 bs=indent,eol ic is
+set bg=dark ru wh=3 wmw=20 wiw=80 noea so=1 siso=8
+set ai si noet ts=4 sw=4 sts=0 bs=indent,eol ic
 set noswf ffs=unix,dos enc=utf-8 fencs=utf-8,cp949,latin1,ascii
-set pa=.,./*,./*/*,./*/*/* wmnu
+set pa=./**3 wmnu is
 
 im #1 <nop>
 im #2 <c-o>:w<cr>
