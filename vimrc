@@ -11,7 +11,7 @@ if has("autocmd")
   filetype plugin indent on
 endif
 
-if has('gui-win32')
+if has('gui_win32')
   nm <m-space> :simalt ~<cr>
   set noimd imi=1 ims=-1
   "source $VIMRUNTIME/delmenu.vim
@@ -44,8 +44,8 @@ im <f12> <c-n>
 
 nm #2 :w<cr>
 function! HandleF3()
-  if exists(':NERDTreeFocus')
-    :NERDTreeFocus
+  if exists(':NERDTreeFind')
+    :NERDTreeFind
   else
     :Vexplore
   endif
