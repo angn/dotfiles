@@ -53,6 +53,7 @@ endfunction
 nm #3 :call HandleF3()<cr>
 nm #4 :q<cr>
 nm #6 :noh<cr>
+nm #7 :mak<cr>
 nm #9 :set paste!<cr>
 nm #0 :
 nm <f11> :cN<cr>
