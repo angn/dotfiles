@@ -25,7 +25,7 @@ endif
 sy on
 let g:netrw_preview=1
 set bg=dark ru wh=3 wmw=20 wiw=80 noea so=1 siso=8
-set ai si noet ts=4 sw=4 sts=0 bs=indent,eol ic cc=81
+set ai si noet ts=4 sw=4 sts=0 bs=indent,eol ic cc=81 lcs=eol:$,tab:>-,trail:#
 set noswf ffs=unix,dos enc=utf-8 fencs=utf-8,cp949,latin1,ascii
 set pa=./**3 wmnu is
 
