@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+mkdir -p ~/.vim/autoload
+cd ~/.vim/autoload
+curl -sLO https://tpo.pe/pathogen.vim
+mkdir -p ../bundle
+cd ../bundle
+git clone -q --depth=1 https://github.com/scrooloose/nerdtree.git
+git clone -q --depth=1 https://github.com/tmhedberg/matchit.git
+git clone -q --depth=1 https://github.com/kien/ctrlp.vim.git
+git clone -q --depth=1 https://github.com/fatih/vim-go.git
