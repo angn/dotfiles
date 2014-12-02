@@ -16,6 +16,7 @@ git config --global alias.dic 'diff --cached -M -C -b'
 git config --global alias.dt difftool
 git config --global alias.mt mergetool
 
+git config --global alias.fp 'fetch -p'
 git config --global alias.up 'pull --ff-only'
 
 git config --global alias.co checkout
