@@ -1,0 +1,2 @@
+term "screen-256color"
+hardstatus alwayslastline "%{kK} %1c %a |%{w} %-Lw%{wg} %n%f %t %{-}%+Lw"
