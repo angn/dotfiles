@@ -1,21 +1,25 @@
-"set" -ex
-"mkdir" -p ~/.vim/{autoload,bundle}
-"cd" ~/.vim/autoload
-"test" -f pathogen.vim || curl -sLO https://tpo.pe/pathogen.vim
-"cd" ../bundle
-":"; for E in \
-  "https://github.com/scrooloose/nerdtree.git" \
-  "https://github.com/tmhedberg/matchit.git" \
-  "https://github.com/kien/ctrlp.vim.git" \
-  "https://github.com/fatih/vim-go.git" \
-  "https://github.com/tpope/vim-sleuth.git" \
-  "https://github.com/digitaltoad/vim-jade.git" \
-  "https://github.com/slim-template/vim-slim.git" \
-  "https://github.com/kchmck/vim-coffee-script.git"; do
-    "declare" E2="${E%.git}"
-    "test" -d "${E2##*/}" || git clone -q --depth=1 "$E"
-":"; done
-"exit"
+"test" -x "$BASH" || exit 1; set -ex; : '
+if 0
+"'
+  "mkdir" -p ~/.vim/{autoload,bundle}
+  "cd" ~/.vim/autoload
+  "test" -f pathogen.vim || curl -sLO https://tpo.pe/pathogen.vim
+  "cd" ../bundle
+  ":"; for E in \
+    "https://github.com/scrooloose/nerdtree.git" \
+    "https://github.com/tmhedberg/matchit.git" \
+    "https://github.com/kien/ctrlp.vim.git" \
+    "https://github.com/fatih/vim-go.git" \
+    "https://github.com/tpope/vim-sleuth.git" \
+    "https://github.com/digitaltoad/vim-jade.git" \
+    "https://github.com/slim-template/vim-slim.git" \
+    "https://github.com/kchmck/vim-coffee-script.git" \
+    "https://github.com/scrooloose/nerdcommenter.git"; do
+      "declare" E2="${E%.git}"
+      "test" -d "${E2##*/}" || git clone -q --depth=1 "$E"
+  ":"; done
+  "exit"
+endif
 
 silent! execute pathogen#infect()
 
