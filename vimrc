@@ -10,6 +10,7 @@ if 0
     "https://github.com/tmhedberg/matchit.git" \
     "https://github.com/kien/ctrlp.vim.git" \
     "https://github.com/fatih/vim-go.git" \
+    "https://github.com/wavded/vim-stylus.git" \
     "https://github.com/tpope/vim-sleuth.git" \
     "https://github.com/digitaltoad/vim-jade.git" \
     "https://github.com/slim-template/vim-slim.git" \
