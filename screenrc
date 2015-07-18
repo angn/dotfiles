@@ -1,6 +1,6 @@
 term "screen-256color"
 hardstatus alwayslastline "%{kK} %1c %a |%{w} %-Lw%{wg} %n%f %t %{-}%+Lw"
 bind c screen 1
+bind ^c screen 1
 bind 0 select 10
 screen 1
-select 1
