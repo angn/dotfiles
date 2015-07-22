@@ -37,6 +37,7 @@ git config --global alias.b branch
 git config --global alias.br branch
 
 git config --global alias.a 'add -A'
+git config --global alias.au 'add -u'
 git config --global alias.ad 'add -A'
 git config --global alias.ap 'add -p'
 git config --global alias.ci commit
