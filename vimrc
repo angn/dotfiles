@@ -39,16 +39,17 @@ set noswf ffs=unix,dos enc=utf-8 fencs=utf-8,cp949,latin1,ascii
 set pa=./**3 wmnu is ml mls=3
 set mouse=a
 
-nm #2 :w<cr>
-nm #3 :exe exists(':NERDTreeFind') ? ':NERDTreeFind' : ':Vexplore'<cr>
-nm #4 :clo<cr>
-nm #5 :e<cr>
-nm #9 :set paste!<cr>
-nm #0 :CtrlP<cr>
-nm <f11> :cN<cr>
-nm <f12> :cn<cr>
+nn #2 :w<cr>
+nn #3 :exe exists(':NERDTreeFind') ? ':NERDTreeFind' : ':Vexplore'<cr>
+nn #4 :clo<cr>
+nn #5 :e<cr>
+nn #6 :ls<cr>:b<space>
+nn #9 :set paste!<cr>
+nn #0 :CtrlP<cr>
+nn <f11> :cN<cr>
+nn <f12> :cn<cr>
 
-nm <c-h> <c-w>h
-nm <c-j> <c-w>j
-nm <c-k> <c-w>k
-nm <c-l> <c-w>l
+nn <c-h> <c-w>h
+nn <c-j> <c-w>j
+nn <c-k> <c-w>k
+nn <c-l> <c-w>l
