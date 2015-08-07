@@ -43,11 +43,8 @@ nm #2 :w<cr>
 nm #3 :exe exists(':NERDTreeFind') ? ':NERDTreeFind' : ':Vexplore'<cr>
 nm #4 :clo<cr>
 nm #5 :e<cr>
-nm #6 <c-^>
-nm #7 :sh<cr>
-nm #8 :CtrlP<cr>
 nm #9 :set paste!<cr>
-nm #0 :ls<cr>
+nm #0 :CtrlP<cr>
 nm <f11> :cN<cr>
 nm <f12> :cn<cr>
 
