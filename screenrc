@@ -1,12 +1,11 @@
 startup_message off
 
-term "screen-256color"
+term "xterm-256color"
 
 hardstatus off
 caption always "%{wK} %-Lw%{wg} %n%f %t %{-}%+Lw"
 
-escape ``
-bindkey -k k1 command
+escape ^\|
 
 bind c screen 1
 bind ^c screen 1
