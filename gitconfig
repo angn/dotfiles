@@ -27,11 +27,8 @@
 	lga = log --oneline --graph --decorate -20 --all
 	mt = mergetool
 	pick = cherry-pick --ff
-	ra = rebase --abort
-	rc = rebase --continue
-	re = reset
+	re = rebase -i --autosquash
 	rh = reset --hard
-	ri = rebase -i --autosquash
 	rp = reset -p
 	st = status -sb
 	up = pull --ff-only --all -t -p
