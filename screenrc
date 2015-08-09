@@ -6,6 +6,7 @@ hardstatus off
 caption always "%{wK} %-Lw%{wg} %n%f %t %{-}%+Lw"
 
 escape ^\|
+bindkey -k F2 command
 
 bind c screen 1
 bind ^c screen 1
