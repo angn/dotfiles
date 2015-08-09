@@ -23,8 +23,8 @@
 	fix = commit --fixup HEAD
 	fp = fetch --all -t -p
 	h = help
-	l = log --oneline --graph --decorate -20
-	la = log --oneline --graph --decorate -20 --all
+	lg = log --oneline --graph --decorate -20
+	lga = log --oneline --graph --decorate -20 --all
 	mt = mergetool
 	pick = cherry-pick --ff
 	ra = rebase --abort
