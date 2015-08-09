@@ -1,58 +1,55 @@
-# git config --global core.autocrlf false
-# echo "* eol=lf" > .gitattributes
-
-git config --global core.pager 'less -FRSX'
-
-git config --global diff.tool vimdiff
-git config --global merge.tool vimdiff
-
-git config --global color.ui auto
-git config --global pretty.tree 'format:%C(yellow)%h %Cgreen%an %Cblue%ar%Cred%d %Creset %s'
-
-git config --global alias.h help
-
-git config --global alias.l 'log --oneline --graph --decorate -20'
-git config --global alias.lg 'log --oneline --graph --decorate -20'
-git config --global alias.lga 'log --oneline --graph --decorate -20 --all'
-git config --global alias.la 'log --oneline --graph --decorate -20 --all'
-git config --global alias.st 'status -sb'
-git config --global alias.s 'status -sb'
-git config --global alias.d 'diff -M -C -b'
-git config --global alias.di 'diff -M -C -b'
-git config --global alias.dic 'diff --cached -M -C -b'
-git config --global alias.dc 'diff --cached -M -C -b'
-git config --global alias.dt difftool
-git config --global alias.m mergetool
-git config --global alias.mt mergetool
-
-git config --global alias.f 'fetch --all -t -p'
-git config --global alias.fp 'fetch --all -t -p'
-git config --global alias.u 'pull --ff-only --all -t -p'
-git config --global alias.up 'pull --ff-only --all -t -p'
-
-git config --global alias.c checkout
-git config --global alias.co checkout
-git config --global alias.cp 'checkout -p'
-git config --global alias.b branch
-git config --global alias.br branch
-
-git config --global alias.a 'add -A'
-git config --global alias.au 'add -u'
-git config --global alias.ad 'add -A'
-git config --global alias.ap 'add -p'
-git config --global alias.ci commit
-git config --global alias.cm 'commit -m'
-git config --global alias.cim 'commit -m'
-git config --global alias.cia 'commit -a'
-git config --global alias.ca 'commit -a'
-git config --global alias.ciam 'commit -am'
-git config --global alias.cam 'commit -am'
-git config --global alias.cma 'commit -am'
-git config --global alias.fix 'commit --fixup HEAD'
-git config --global alias.r 'rebase'
-git config --global alias.re 'rebase -i --autosquash'
-git config --global alias.ri 'rebase -i --autosquash'
-git config --global alias.rc 'rebase --continue'
-git config --global alias.ra 'rebase --abort'
-git config --global alias.p 'cherry-pick --ff'
-git config --global alias.pick 'cherry-pick --ff'
+[color]
+	ui = auto
+[pretty]
+	tree = format:%C(yellow)%h %Cgreen%an %Cblue%ar%Cred%d %Creset %s
+[alias]
+	a = add -A
+	ad = add -A
+	ap = add -p
+	b = branch
+	br = branch
+	c = checkout
+	ca = commit -a
+	cam = commit -am
+	ci = commit
+	cia = commit -a
+	ciam = commit -am
+	cim = commit -m
+	cm = commit -m
+	cma = commit -am
+	co = checkout
+	cp = checkout -p
+	d = diff -M -C -b
+	dc = diff --cached -M -C -b
+	di = diff -M -C -b
+	dic = diff --cached -M -C -b
+	dt = difftool
+	f = fetch --all -t -p
+	fix = commit --fixup HEAD
+	fp = fetch --all -t -p
+	h = help
+	l = log --oneline --graph --decorate -20
+	la = log --oneline --graph --decorate -20 --all
+	lg = log --oneline --graph --decorate -20
+	lga = log --oneline --graph --decorate -20 --all
+	m = mergetool
+	mt = mergetool
+	p = cherry-pick --ff
+	pick = cherry-pick --ff
+	r = rebase
+	ra = rebase --abort
+	rc = rebase --continue
+	re = rebase -i --autosquash
+	ri = rebase -i --autosquash
+	s = status -sb
+	st = status -sb
+	u = pull --ff-only --all -t -p
+	up = pull --ff-only --all -t -p
+[push]
+	default = upstream
+[core]
+	pager = less -FRSX
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
