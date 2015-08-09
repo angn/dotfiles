@@ -3,12 +3,9 @@
 [pretty]
 	tree = format:%C(yellow)%h %Cgreen%an %Cblue%ar%Cred%d %Creset %s
 [alias]
-	a = add -A
 	ad = add -A
 	ap = add -p
-	b = branch
 	br = branch
-	c = checkout
 	ca = commit -a
 	cam = commit -am
 	ci = commit
@@ -19,31 +16,24 @@
 	cma = commit -am
 	co = checkout
 	cp = checkout -p
-	d = diff -M -C -b
 	dc = diff --cached -M -C -b
 	di = diff -M -C -b
 	dic = diff --cached -M -C -b
 	dt = difftool
-	f = fetch --all -t -p
 	fix = commit --fixup HEAD
 	fp = fetch --all -t -p
 	h = help
 	l = log --oneline --graph --decorate -20
 	la = log --oneline --graph --decorate -20 --all
-	lg = log --oneline --graph --decorate -20
-	lga = log --oneline --graph --decorate -20 --all
-	m = mergetool
 	mt = mergetool
-	p = cherry-pick --ff
 	pick = cherry-pick --ff
-	r = rebase
 	ra = rebase --abort
 	rc = rebase --continue
-	re = rebase -i --autosquash
+	re = reset
+	rh = reset --hard
 	ri = rebase -i --autosquash
-	s = status -sb
+	rp = reset -p
 	st = status -sb
-	u = pull --ff-only --all -t -p
 	up = pull --ff-only --all -t -p
 [push]
 	default = upstream
