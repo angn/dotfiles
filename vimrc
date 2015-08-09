@@ -53,3 +53,6 @@ nn <c-h> <c-w>h
 nn <c-j> <c-w>j
 nn <c-k> <c-w>k
 nn <c-l> <c-w>l
+
+nn <c-_> :call NERDComment("n", "Toggle")<cr>
+ino <c-_> <c-o>:call NERDComment("n", "Toggle")<cr>
