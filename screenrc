@@ -1,6 +1,7 @@
 startup_message off
 
 term "xterm-256color"
+vbell off
 
 hardstatus off
 caption always "%{wK} %-Lw%{wg} %n%f %t %{-}%+Lw"
