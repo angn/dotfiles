@@ -9,6 +9,8 @@ caption always "%{wK} %-Lw%{wg} %n%f %t %{-}%+Lw"
 escape ^\|
 bindkey -k F2 command
 
+maptimeout 0
+
 bind c screen 1
 bind ^c screen 1
 bind 0 screen 10
