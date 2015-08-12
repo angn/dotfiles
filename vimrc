@@ -31,8 +31,11 @@ elseif &t_Co >= 256
   colo slate
 endif
 
-sy on
 let g:netrw_preview=1
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+
+sy on
+
 set bg=dark ru wh=3 wmw=20 wiw=80 noea so=1 siso=8
 set ai si noet ts=4 sw=4 sts=0 bs=indent,eol ic cc=81 lcs=eol:$,tab:>-,trail:#
 set noswf ffs=unix,dos enc=utf-8 fencs=utf-8,cp949,latin1,ascii
