@@ -54,6 +54,7 @@ let g:netrw_preview = 1
 let g:ctrlp_switch_buffer = '0'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 let g:buftabline_show = 1
+let g:rainbow_active = 1
 
 if has("autocmd")
   filetype plugin indent on
@@ -81,8 +82,8 @@ vn X "_x
 vn P "0P
 
 nn #2 :w<cr>
-im #2 <c-o><f2>
-nn #3 :exe <cr>(':NERDTreeFind') ? ':NERDTreeFind' : ':Vexplore'<cr>
+im #2 <c-o>:w<cr>
+nn #3 :exe exists(':NERDTreeFind') ? ':NERDTreeFind' : ':Vexplore'<cr>
 nn #4 :bd<cr>
 nn #5 :Run<cr>
 nn #0 :bp<cr>
