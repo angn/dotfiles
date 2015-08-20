@@ -40,8 +40,9 @@
 sil! exe pathogen#infect()
 Helptags
 
-se nocp hid lz wmnu pa=./**3 cc=81
-se ru wh=3 wmw=20 wiw=80 noea so=1 siso=8
+se nocp hid lz wmnu pa=./**3
+se ru nu cc=81
+se wh=3 wmw=20 wiw=80 noea so=1 siso=8
 se noswf ffs=unix,dos enc=utf-8 fencs=utf-8,cp949,latin1,ascii
 se ai si noet ts=4 sw=4 sts=0 sr ml mls=3
 se is ic scs
@@ -55,6 +56,10 @@ let g:ctrlp_switch_buffer = '0'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 let g:buftabline_show = 1
 let g:rainbow_active = 1
+let g:runfile_by_name = {
+\ 'Gruntfile.js': '!grunt --gruntfile %',
+\ }
+
 
 if has("autocmd")
   filetype plugin indent on
@@ -63,14 +68,14 @@ en
 if has('gui_win32')
   nn <m-space> :simalt ~<cr>
   se noimd imi=1 ims=-1
-  "so $VIMRUNTIME/delmenu.vim
-  se go-=T gfn=Consolas:h11
-  "se gfn=NanumGothicCoding:h12:cHANGEUL
+  se go-=T gfn=Consolas:h13
   colo slate
 en
 
 if &t_Co >= 256
   colo slate
+  hi CursorLine cterm=NONE ctermbg=236
+  se cul
 endif
 
 nn <c-h> <c-w>h
