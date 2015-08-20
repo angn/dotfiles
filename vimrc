@@ -79,7 +79,6 @@ if &t_Co >= 256
   hi TabLine ctermfg=8
   hi TabLineSel ctermbg=2
   hi TabLineFill ctermfg=8
-  se cul
 endif
 
 nn <c-h> <c-w>h
