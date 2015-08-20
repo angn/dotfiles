@@ -46,7 +46,7 @@ se wh=3 wmw=20 wiw=80 noea so=1 siso=8
 se noswf ffs=unix,dos enc=utf-8 fencs=utf-8,cp949,latin1,ascii
 se ai si noet ts=4 sw=4 sts=0 sr ml mls=3
 se is ic scs
-se bs=indent,eol nf-=octal pt=<f9> cb=unnamed
+se bs=indent,eol nf-=octal pt=<f7> cb=unnamed
 se mouse=a
 
 sy enable
@@ -91,20 +91,14 @@ vn P "0P
 nn #2 :w<cr>
 im #2 <c-o>:w<cr>
 nn #3 :exe exists(':NERDTreeFind') ? ':NERDTreeFind' : ':Vexplore'<cr>
-nn #4 :bd<cr>
+nn #4 :clo<cr>
 nn #5 :Run<cr>
-nn #0 :bp<cr>
-nn <f11> :bn<cr>
-
-nn <c-n> :CtrlPBuffer<cr>
+nn #8 :CtrlPLine<cr>
+nn #9 :bp<cr>
+nn #0 :bn<cr>
 
 nn <c-_> :call NERDComment("n", "Toggle")<cr>
 vn <c-_> :call NERDComment("n", "Toggle")<cr>gv
 im <c-_> <c-o><c-_>
 
-nn <leader>q :bd<cr>
-nn <leader>s <c-w>s
-nn <leader>v <c-w>v
-nn <leader>w :w<cr>
-
-no ]o <Plug>(openbrowser-smart-search)
+no gx <Plug>(openbrowser-smart-search)
