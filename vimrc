@@ -76,8 +76,9 @@ if &t_Co >= 256
   colo slate
   hi StatusLineNC ctermfg=darkgray
   hi TabLine cterm=none ctermfg=black ctermbg=darkgray
-  hi TabLineSel ctermfg=black ctermbg=white
-  hi! link TabLineFill TabLine
+  hi TabLineFill cterm=none ctermfg=black ctermbg=darkgray
+  hi TabLineSel ctermfg=white ctermbg=green
+  hi BufTabLineActive cterm=none ctermfg=white ctermbg=darkgray
 endif
 
 nn <c-h> <c-w>h
