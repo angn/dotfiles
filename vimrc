@@ -48,7 +48,7 @@ se wh=3 wmw=20 wiw=80 noea so=1 siso=8
 se noswf ffs=unix,dos enc=utf-8 fencs=utf-8,cp949,latin1,ascii
 se ai si noet ts=4 sw=4 sts=0 sr ml mls=3
 se is ic scs
-se bs=indent,eol,start nf-=octal pt=<f7> cb=unnamed
+se bs=indent,eol,start nf-=octal pt=<f9> cb=unnamed
 se mouse=a
 
 sy enable
@@ -92,12 +92,39 @@ vn P "0P
 
 nn #2 :w<cr>
 ino #2 <c-o>:w<cr>
-nn #3 :exe exists(':NERDTreeFind') ? ':NERDTreeFind' : ':Vexplore'<cr>
-nn #4 :clo<cr>
-nn #5 :exe exists(':Run') ? :Run : ':!%'<cr>
+nn #3 :exe exists(':NERDTreeFind') ? 'NERDTreeFind' : 'Vexplore'<cr>
+nn #4 :exe winnr('$') > 1 ? 'clo' : 'bd'<cr>
+nn #5 :exe exists(':Run') ? 'Run' : '!%'<cr>
+nn #6 <c-^>
+nn #7 :bp<cr>
+nn #8 :bn<cr>
 
 nn ( :bp<cr>
 nn ) :bn<cr>
+nn <c-n> :ene<cr>
+
+nn <leader>Q :qa<cr>
+nn <leader>X :xa<cr>
+nn <leader>q <c-w>c
+nn <leader>w :w<cr>
+nn <leader>a :wa<cr>
+nn <leader>s <c-w>s
+nn <leader>v <c-w>v
+nn <leader>o <c-w>o
+nn <leader>n <c-w>n
+
+nn <leader>[ :bp<cr>
+nn <leader>] :bn<cr>
+nn <leader>1 :exe 'b'.filter(range(1,bufnr("$")),'buflisted(v:val)')[0]<cr>
+nn <leader>2 :exe 'b'.filter(range(1,bufnr("$")),'buflisted(v:val)')[1]<cr>
+nn <leader>3 :exe 'b'.filter(range(1,bufnr("$")),'buflisted(v:val)')[2]<cr>
+nn <leader>4 :exe 'b'.filter(range(1,bufnr("$")),'buflisted(v:val)')[3]<cr>
+nn <leader>5 :exe 'b'.filter(range(1,bufnr("$")),'buflisted(v:val)')[4]<cr>
+nn <leader>6 :exe 'b'.filter(range(1,bufnr("$")),'buflisted(v:val)')[5]<cr>
+nn <leader>7 :exe 'b'.filter(range(1,bufnr("$")),'buflisted(v:val)')[6]<cr>
+nn <leader>8 :exe 'b'.filter(range(1,bufnr("$")),'buflisted(v:val)')[7]<cr>
+nn <leader>9 :exe 'b'.filter(range(1,bufnr("$")),'buflisted(v:val)')[8]<cr>
+nn <leader>0 :exe 'b'.filter(range(1,bufnr("$")),'buflisted(v:val)')[9]<cr>
 
 ino <c-b> <left>
 ino <c-f> <right>
