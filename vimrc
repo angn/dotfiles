@@ -38,7 +38,9 @@
 "' | sed 's/^"//' | bash; exit
 
 sil! exe pathogen#infect()
-Helptags
+if exists(':Helptags')
+  Helptags
+en
 
 se nocp hid lz wmnu pa=./**3
 se ru nu cc=81
@@ -46,7 +48,7 @@ se wh=3 wmw=20 wiw=80 noea so=1 siso=8
 se noswf ffs=unix,dos enc=utf-8 fencs=utf-8,cp949,latin1,ascii
 se ai si noet ts=4 sw=4 sts=0 sr ml mls=3
 se is ic scs
-se bs=indent,eol nf-=octal pt=<f7> cb=unnamed
+se bs=indent,eol,start nf-=octal pt=<f7> cb=unnamed
 se mouse=a
 
 sy enable
@@ -59,7 +61,6 @@ let g:rainbow_active = 1
 let g:runfile_by_name = {
 \ 'Gruntfile.js': '!grunt --gruntfile %',
 \ }
-
 
 if has("autocmd")
   filetype plugin indent on
@@ -90,16 +91,20 @@ vn X "_x
 vn P "0P
 
 nn #2 :w<cr>
-im #2 <c-o>:w<cr>
+ino #2 <c-o>:w<cr>
 nn #3 :exe exists(':NERDTreeFind') ? ':NERDTreeFind' : ':Vexplore'<cr>
 nn #4 :clo<cr>
-nn #5 :Run<cr>
-nn #8 :CtrlPLine<cr>
-nn #9 :bp<cr>
-nn #0 :bn<cr>
+nn #5 :exe exists(':Run') ? :Run : ':!%'<cr>
 
-nn <c-_> :call NERDComment("n", "Toggle")<cr>
-vn <c-_> :call NERDComment("n", "Toggle")<cr>gv
-im <c-_> <c-o><c-_>
+nn ( :bp<cr>
+nn ) :bn<cr>
 
-no gx <Plug>(openbrowser-smart-search)
+ino <c-b> <left>
+ino <c-f> <right>
+
+nn Q :CtrlPLine<cr>
+
+map <c-_> <plug>NERDCommenterToggle
+im <c-_> <c-o><plug>NERDCommenterToggle
+
+map gx <plug>(openbrowser-smart-search)
