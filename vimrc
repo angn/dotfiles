@@ -21,7 +21,6 @@
 " clone_or_pull https://github.com/pbrisbin/vim-runfile.git &
 " clone_or_pull https://github.com/airblade/vim-gitgutter.git &
 " clone_or_pull https://github.com/ap/vim-buftabline.git &
-" clone_or_pull https://github.com/pbrisbin/vim-runfile.git &
 " clone_or_pull https://github.com/tpope/vim-fugitive.git &
 " clone_or_pull https://github.com/tpope/vim-surround.git &
 " clone_or_pull https://github.com/easymotion/vim-easymotion.git &
