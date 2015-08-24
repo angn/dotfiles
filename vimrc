@@ -97,8 +97,10 @@ nn #3 :exe exists(':NERDTreeFind') ? 'NERDTreeFind' : 'Vexplore'<cr>
 nn #4 :exe winnr('$') > 1 ? 'clo' : 'bd'<cr>
 nn #5 :exe exists(':Run') ? 'Run' : '!%'<cr>
 nn #6 <c-^>
-nn #7 :bp<cr>
-nn #8 :bn<cr>
+nn #7 :mak<cr>
+nn #8 :TagbarToggle<cr>
+nn #9 :bp<cr>
+nn #0 :bn<cr>
 
 nn ( :bp<cr>
 nn ) :bn<cr>
