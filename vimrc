@@ -91,16 +91,18 @@ nn <c-l> <c-w>l
 vn X "_x
 vn P "0P
 
-nn #2 :w<cr>
-ino #2 <c-o>:w<cr>
-nn #3 :NERDTreeToggle<cr>
-nn #4 :bd<cr>
-nn #5 :Run<cr>
-nn #6 <c-^>
-nn #7 :mak<cr>
-nn #8 :TagbarToggle<cr>
-nn #9 :bp<cr>
-nn #0 :bn<cr>
+nn <f2> :w<cr>
+ino <f2> <c-o>:w<cr>
+nn <leader><f2> :wa<cr>
+nn <f3> :NERDTreeToggle<cr>
+nn <leader><f3> :NERDTreeFind<cr>
+nn <f4> :bd<cr>
+nn <f5> :Run<cr>
+nn <f6> <c-^>
+nn <f7> :mak<cr>
+nn <f8> :TagbarToggle<cr>
+nn <f9> :bp<cr>
+nn <f0> :bn<cr>
 
 nn ZA :xa<cr>
 nn ( :bp<cr>
@@ -129,6 +131,7 @@ nn <leader>8 :exe 'b'.buftabline#user_buffers()[7]<cr>
 nn <leader>9 :exe 'b'.buftabline#user_buffers()[8]<cr>
 nn <leader>0 :exe 'b'.buftabline#user_buffers()[9]<cr>
 
+ino <c-]> <c-o>f
 ino <c-b> <left>
 ino <c-f> <right>
 ino <esc>b <c-o>B
