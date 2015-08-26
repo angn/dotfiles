@@ -8,6 +8,7 @@
 	br = branch
 	ca = commit -a
 	cam = commit -am
+	cb = checkout -b
 	ci = commit
 	cia = commit -a
 	ciam = commit -am
