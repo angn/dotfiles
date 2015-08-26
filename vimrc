@@ -33,6 +33,7 @@
 " clone_or_pull https://github.com/tyru/open-browser.vim.git &
 " clone_or_pull https://github.com/flazz/vim-colorschemes.git &
 " clone_or_pull https://github.com/scrooloose/syntastic.git &
+" clone_or_pull https://github.com/tpope/vim-repeat.git &
 " wait
 "' | sed 's/^"//' | bash; exit
 
@@ -52,6 +53,7 @@ se mouse=a
 
 sy enable
 
+let g:NERDCreateDefaultMappings = 0
 let g:netrw_preview = 1
 let g:ctrlp_switch_buffer = '0'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
@@ -92,41 +94,41 @@ vn P "0P
 
 nn #2 :w<cr>
 ino #2 <c-o>:w<cr>
-nn #3 :exe exists(':NERDTreeFind') ? 'NERDTreeFind' : 'Vexplore'<cr>
-nn #4 :exe winnr('$') > 1 ? 'clo' : 'bd'<cr>
-nn #5 :exe exists(':Run') ? 'Run' : '!%'<cr>
+nn #3 :NERDTreeToggle<cr>
+nn #4 :bd<cr>
+nn #5 :Run<cr>
 nn #6 <c-^>
 nn #7 :mak<cr>
 nn #8 :TagbarToggle<cr>
 nn #9 :bp<cr>
 nn #0 :bn<cr>
 
+nn ZA :xa<cr>
 nn ( :bp<cr>
 nn ) :bn<cr>
 nn <c-n> :ene<cr>
 
-nn <leader>Q :qa<cr>
-nn <leader>X :xa<cr>
-nn <leader>q <c-w>c
-nn <leader>w :w<cr>
-nn <leader>a :wa<cr>
+nn <leader>c <c-w>c
 nn <leader>s <c-w>s
 nn <leader>v <c-w>v
 nn <leader>o <c-w>o
 nn <leader>n <c-w>n
+nn <leader>- <c-w>_
+nn <leader>= <c-w>=
 
+nn <leader>` <c-^>
 nn <leader>[ :bp<cr>
 nn <leader>] :bn<cr>
-nn <leader>1 :exe 'b'.filter(range(1,bufnr("$")),'buflisted(v:val)')[0]<cr>
-nn <leader>2 :exe 'b'.filter(range(1,bufnr("$")),'buflisted(v:val)')[1]<cr>
-nn <leader>3 :exe 'b'.filter(range(1,bufnr("$")),'buflisted(v:val)')[2]<cr>
-nn <leader>4 :exe 'b'.filter(range(1,bufnr("$")),'buflisted(v:val)')[3]<cr>
-nn <leader>5 :exe 'b'.filter(range(1,bufnr("$")),'buflisted(v:val)')[4]<cr>
-nn <leader>6 :exe 'b'.filter(range(1,bufnr("$")),'buflisted(v:val)')[5]<cr>
-nn <leader>7 :exe 'b'.filter(range(1,bufnr("$")),'buflisted(v:val)')[6]<cr>
-nn <leader>8 :exe 'b'.filter(range(1,bufnr("$")),'buflisted(v:val)')[7]<cr>
-nn <leader>9 :exe 'b'.filter(range(1,bufnr("$")),'buflisted(v:val)')[8]<cr>
-nn <leader>0 :exe 'b'.filter(range(1,bufnr("$")),'buflisted(v:val)')[9]<cr>
+nn <leader>1 :exe 'b'.buftabline#user_buffers()[0]<cr>
+nn <leader>2 :exe 'b'.buftabline#user_buffers()[1]<cr>
+nn <leader>3 :exe 'b'.buftabline#user_buffers()[2]<cr>
+nn <leader>4 :exe 'b'.buftabline#user_buffers()[3]<cr>
+nn <leader>5 :exe 'b'.buftabline#user_buffers()[4]<cr>
+nn <leader>6 :exe 'b'.buftabline#user_buffers()[5]<cr>
+nn <leader>7 :exe 'b'.buftabline#user_buffers()[6]<cr>
+nn <leader>8 :exe 'b'.buftabline#user_buffers()[7]<cr>
+nn <leader>9 :exe 'b'.buftabline#user_buffers()[8]<cr>
+nn <leader>0 :exe 'b'.buftabline#user_buffers()[9]<cr>
 
 ino <c-b> <left>
 ino <c-f> <right>
