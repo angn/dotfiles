@@ -17,7 +17,7 @@
 " clone_or_pull https://github.com/digitaltoad/vim-jade.git &
 " clone_or_pull https://github.com/slim-template/vim-slim.git &
 " clone_or_pull https://github.com/kchmck/vim-coffee-script.git &
-" clone_or_pull https://github.com/scrooloose/nerdcommenter.git &
+" clone_or_pull https://github.com/tpope/vim-commentary.git &
 " clone_or_pull https://github.com/pbrisbin/vim-runfile.git &
 " clone_or_pull https://github.com/airblade/vim-gitgutter.git &
 " clone_or_pull https://github.com/ap/vim-buftabline.git &
@@ -53,7 +53,6 @@ se mouse=a
 
 sy enable
 
-let g:NERDCreateDefaultMappings = 0
 let g:netrw_preview = 1
 let g:ctrlp_switch_buffer = '0'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
@@ -132,10 +131,17 @@ nn <leader>0 :exe 'b'.buftabline#user_buffers()[9]<cr>
 
 ino <c-b> <left>
 ino <c-f> <right>
+ino <esc>b <c-o>B
+ino <esc>d <c-o>dW
+ino <esc>f <c-o>W
+ino <esc>n <down>
+ino <esc>p <up>
+ino <esc><bs> <c-o>dB
 
 nn Q :CtrlPLine<cr>
 
-map <c-_> <plug>NERDCommenterToggle
-im <c-_> <c-o><plug>NERDCommenterToggle
+nn <c-_> :Commentary<cr>
+vm <c-_> gcgv
+ino <c-_> <c-o>:Commentary<cr>
 
 map gx <plug>(openbrowser-smart-search)
