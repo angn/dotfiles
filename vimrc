@@ -134,14 +134,8 @@ nn <leader>0 :exe 'b'.buftabline#user_buffers()[9]<cr>
 ino <c-]> <c-o>f
 ino <c-b> <left>
 ino <c-f> <right>
-ino <esc>b <c-o>B
-ino <esc>d <c-o>dW
-ino <esc>f <c-o>W
-ino <esc>n <down>
-ino <esc>p <up>
-ino <esc><bs> <c-o>dB
 
-nn Q :CtrlPLine<cr>
+nn Q :CtrlPBuffer<cr>
 
 nn <c-_> :Commentary<cr>
 vm <c-_> gcgv
