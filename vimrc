@@ -128,6 +128,10 @@ nn <leader>n <c-w>n
 nn <leader>- <c-w>_
 nn <leader>= <c-w>=
 
+nn <leader>y :sil .w !pbcopy<cr>
+vn <leader>y :w !pbcopy<home>sil <cr>
+nn <leader>p :r !pbpaste<cr>
+
 nn <leader>` <c-^>
 nn <leader>[ :bp<cr>
 nn <leader>] :bn<cr>
