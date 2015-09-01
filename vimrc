@@ -95,7 +95,7 @@ vn P "0P
 nn <f2> :w<cr>
 ino <f2> <c-o>:w<cr>
 nn <leader><f2> :wa<cr>
-nn <f3> :NERDTreeToggle<cr>
+nn <f3> :NERDTreeFocus<cr>
 nn <leader><f3> :NERDTreeFind<cr>
 nn <f4> :bd<cr>
 nn <f5> :Run<cr>
@@ -130,7 +130,7 @@ nn <leader>= <c-w>=
 
 nn <leader>y :sil .w !pbcopy<cr>
 vn <leader>y :w !pbcopy<home>sil <cr>
-nn <leader>p :r !pbpaste<cr>
+no <leader>p :r !pbpaste<cr>
 
 nn <leader>` <c-^>
 nn <leader>[ :bp<cr>
