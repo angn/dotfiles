@@ -104,6 +104,16 @@ nn <f7> :mak<cr>
 nn <f8> :TagbarToggle<cr>
 nn <f9> :bp<cr>
 nn <f10> :bn<cr>
+nn <s-f1> :exe 'b'.buftabline#user_buffers()[0]<cr>
+nn <s-f2> :exe 'b'.buftabline#user_buffers()[1]<cr>
+nn <s-f3> :exe 'b'.buftabline#user_buffers()[2]<cr>
+nn <s-f4> :exe 'b'.buftabline#user_buffers()[3]<cr>
+nn <s-f5> :exe 'b'.buftabline#user_buffers()[4]<cr>
+nn <s-f6> :exe 'b'.buftabline#user_buffers()[5]<cr>
+nn <s-f7> :exe 'b'.buftabline#user_buffers()[6]<cr>
+nn <s-f8> :exe 'b'.buftabline#user_buffers()[7]<cr>
+nn <s-f9> :exe 'b'.buftabline#user_buffers()[8]<cr>
+nn <s-f10> :exe 'b'.buftabline#user_buffers()[9]<cr>
 
 nn ZA :xa<cr>
 nn ( :bp<cr>
