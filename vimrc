@@ -42,7 +42,7 @@ if exists(':Helptags')
   Helptags
 en
 
-se nocp hid lz wmnu pa=./**3
+se nocp hid tf lz wmnu pa=./**3
 se ru nu cc=81
 se wh=3 wmw=20 wiw=80 noea so=1 siso=8
 se noswf ffs=unix,dos enc=utf-8 fencs=utf-8,cp949,latin1,ascii
@@ -57,6 +57,7 @@ let g:netrw_preview = 1
 let g:ctrlp_switch_buffer = '0'
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 let g:buftabline_show = 1
+let g:buftabline_numbers = 2
 " let g:rainbow_active = 1
 let g:runfile_by_name = {
 \ 'Gruntfile.js': '!grunt --gruntfile %',
@@ -102,7 +103,7 @@ nn <f6> <c-^>
 nn <f7> :mak<cr>
 nn <f8> :TagbarToggle<cr>
 nn <f9> :bp<cr>
-nn <f0> :bn<cr>
+nn <f10> :bn<cr>
 
 nn ZA :xa<cr>
 nn ( :bp<cr>
