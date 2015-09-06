@@ -49,7 +49,7 @@ se noswf ffs=unix,dos enc=utf-8 fencs=utf-8,cp949,latin1,ascii
 se ai si noet ts=4 sw=4 sts=0 sr ml mls=3
 se is ic scs
 se bs=indent,eol,start nf-=octal pt=<f9> cb=unnamed
-se mouse=a
+se ttm=100 mouse=a
 
 sy enable
 
