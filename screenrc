@@ -4,7 +4,7 @@ term "xterm-256color"
 vbell off
 
 hardstatus off
-caption always "%{wK} %-Lw%{wg} %n%f %t %{-}%+Lw"
+caption always "%{wK} %-Lw%{wm} %n%f %t %{-}%+Lw"
 
 escape ^\|
 bindkey -k F2 command
