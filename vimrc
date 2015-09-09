@@ -115,6 +115,7 @@ nn <s-f8> :exe 'b'.buftabline#user_buffers()[7]<cr>
 nn <s-f9> :exe 'b'.buftabline#user_buffers()[8]<cr>
 nn <s-f10> :exe 'b'.buftabline#user_buffers()[9]<cr>
 
+nn 0 ^
 nn ZA :xa<cr>
 nn ( :bp<cr>
 nn ) :bn<cr>
