@@ -81,7 +81,7 @@ if &t_Co >= 256
   hi StatusLineNC ctermfg=8 ctermbg=7
   hi TabLine cterm=none ctermfg=0 ctermbg=8
   hi TabLineFill cterm=none ctermfg=0 ctermbg=8
-  hi TabLineSel ctermfg=7 ctermbg=2
+  hi TabLineSel ctermfg=7 ctermbg=6
   hi BufTabLineActive cterm=none ctermfg=7 ctermbg=8
   hi VertSplit ctermfg=8 ctermbg=0
 endif
