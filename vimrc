@@ -46,7 +46,7 @@ en
 
 se nocp hid tf lz wmnu pa=./**3
 se ru nu cc=81
-se wh=3 wmw=20 wiw=80 noea so=1 siso=8
+se wh=3 wmw=20 wiw=80 noea so=5 siso=8
 se noswf ffs=unix,dos enc=utf-8 fencs=utf-8,cp949,latin1,ascii
 se ai si noet ts=4 sw=4 sts=0 sr ml mls=3
 se is ic scs
