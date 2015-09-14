@@ -37,6 +37,8 @@
 " wait
 "' | sed 's/^"//' | bash; exit
 
+so $VIMRUNTIME/macros/matchit.vim
+
 sil! exe pathogen#infect()
 if exists(':Helptags')
   Helptags
