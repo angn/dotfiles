@@ -34,6 +34,7 @@
 " clone_or_pull https://github.com/flazz/vim-colorschemes.git &
 " clone_or_pull https://github.com/scrooloose/syntastic.git &
 " clone_or_pull https://github.com/tpope/vim-repeat.git &
+" clone_or_pull https://github.com/nelstrom/vim-visual-star-search.git &
 " wait
 "' | sed 's/^"//' | bash; exit
 
@@ -57,34 +58,40 @@ sy enable
 
 let g:netrw_preview = 1
 let g:ctrlp_switch_buffer = '0'
+let g:ctrlp_max_files = 1000
+let g:ctrlp_max_depth = 3
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 let g:buftabline_show = 1
 let g:buftabline_numbers = 2
 " let g:rainbow_active = 1
 let g:runfile_by_name = {
 \ 'Gruntfile.js': '!grunt --gruntfile %',
+\ '.vimrc': 'so %',
 \ }
 
 if has("autocmd")
   filetype plugin indent on
 en
 
+if &t_Co >= 256 || has('gui_running')
+  colo slate
+  hi StatusLineNC ctermfg=8 ctermbg=7
+  hi TabLine cterm=none ctermbg=8 ctermfg=0 gui=none guifg=gray40 guibg=#c2bfa5
+  hi TabLineFill ctermbg=0 ctermfg=8 guibg=black guifg=#c2bfa5
+  hi TabLineSel ctermfg=7 ctermbg=6 guifg=#c2bfa5 guibg=brown
+  hi BufTabLineActive ctermbg=8 ctermfg=7 guibg=#c2bfa5 guifg=black
+  hi VertSplit ctermfg=8 ctermbg=0
+endif
+
 if has('gui_win32')
   nn <m-space> :simalt ~<cr>
   se noimd imi=1 ims=-1
   se go-=T gfn=Consolas:h13
-  colo slate
 en
 
-if &t_Co >= 256
-  colo slate
-  hi StatusLineNC ctermfg=8 ctermbg=7
-  hi TabLine cterm=none ctermfg=0 ctermbg=8
-  hi TabLineFill cterm=none ctermfg=0 ctermbg=8
-  hi TabLineSel ctermfg=7 ctermbg=6
-  hi BufTabLineActive cterm=none ctermfg=7 ctermbg=8
-  hi VertSplit ctermfg=8 ctermbg=0
-endif
+if has('gui_macvim')
+  se gfn=Menlo\ Regular:h17
+en
 
 nn <c-h> <c-w>h
 nn <c-j> <c-w>j
@@ -96,32 +103,33 @@ vn P "0P
 
 nn <f2> :w<cr>
 ino <f2> <c-o>:w<cr>
-nn <leader><f2> :wa<cr>
 nn <f3> :NERDTreeFocus<cr>
-nn <leader><f3> :NERDTreeFind<cr>
-nn <f4> :bd<cr>
+nn <f4> :clo<cr>
 nn <f5> :Run<cr>
 nn <f6> <c-^>
 nn <f7> :mak<cr>
 nn <f8> :TagbarToggle<cr>
 nn <f9> :bp<cr>
 nn <f10> :bn<cr>
-nn <s-f1> :exe 'b'.buftabline#user_buffers()[0]<cr>
-nn <s-f2> :exe 'b'.buftabline#user_buffers()[1]<cr>
-nn <s-f3> :exe 'b'.buftabline#user_buffers()[2]<cr>
-nn <s-f4> :exe 'b'.buftabline#user_buffers()[3]<cr>
-nn <s-f5> :exe 'b'.buftabline#user_buffers()[4]<cr>
-nn <s-f6> :exe 'b'.buftabline#user_buffers()[5]<cr>
-nn <s-f7> :exe 'b'.buftabline#user_buffers()[6]<cr>
-nn <s-f8> :exe 'b'.buftabline#user_buffers()[7]<cr>
-nn <s-f9> :exe 'b'.buftabline#user_buffers()[8]<cr>
-nn <s-f10> :exe 'b'.buftabline#user_buffers()[9]<cr>
 
+nn <up> gk
+nn <down> gj
+
+nn Q :CtrlPLine %<cr>
 nn 0 ^
-nn ZA :xa<cr>
 nn ( :bp<cr>
 nn ) :bn<cr>
 nn <c-n> :ene<cr>
+
+nn <leader>w :w<cr>
+nn <leader>a :wa<cr>
+nn <leader>q :qa<cr>
+nn <leader>x :xa<cr>
+nn <leader>z :sh<cr>
+nn <leader>d :bd<cr>
+nn <leader>e :NERDTreeFocus<cr>
+nn <leader>r :NERDTreeFind<cr>
+nn <leader>f <plug>(easymotion-s2)
 
 nn <leader>c <c-w>c
 nn <leader>s <c-w>s
@@ -152,8 +160,6 @@ nn <leader>0 :exe 'b'.buftabline#user_buffers()[9]<cr>
 ino <c-]> <c-o>f
 ino <c-b> <left>
 ino <c-f> <right>
-
-nn Q :CtrlPBuffer<cr>
 
 nn <c-_> :Commentary<cr>
 vm <c-_> gcgv
