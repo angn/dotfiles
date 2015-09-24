@@ -5,6 +5,7 @@
 [alias]
 	ad = add -A
 	ap = add -p
+	au = add -u
 	br = branch
 	ca = commit -a
 	cam = commit -am
