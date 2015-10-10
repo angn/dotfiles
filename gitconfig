@@ -6,6 +6,7 @@
 	ad = add -A
 	ap = add -p
 	au = add -u
+	bd = branch -D
 	br = branch
 	ca = commit -a
 	cam = commit -am
