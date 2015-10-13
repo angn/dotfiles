@@ -1,0 +1,55 @@
+#!/bin/bash
+set -eu
+
+cd "`dirname "${BASH_SOURCE[0]}"`"
+
+for e in gitconfig vimrc screenrc tmux.conf; do
+  src="$PWD"/$e
+  dest=~/.$e
+  test ! -f "$src" || test -e "$dest" || echo "$e" && ln -s -f "$src" "$dest"
+done
+
+echo .vim
+mkdir -p ~/.vim/{autoload,bundle}
+
+if vim --version | grep '^VIM - Vi IMproved 7\.[3-9] '
+then
+
+  echo pathogen
+  cd ~/.vim/autoload && curl -sLO https://tpo.pe/pathogen.vim
+
+  for url in \
+    https://github.com/scrooloose/nerdtree.git \
+    https://github.com/kien/ctrlp.vim.git \
+    https://github.com/fatih/vim-go.git \
+    https://github.com/wavded/vim-stylus.git \
+    https://github.com/tpope/vim-sleuth.git \
+    https://github.com/digitaltoad/vim-jade.git \
+    https://github.com/slim-template/vim-slim.git \
+    https://github.com/kchmck/vim-coffee-script.git \
+    https://github.com/tpope/vim-commentary.git \
+    https://github.com/pbrisbin/vim-runfile.git \
+    https://github.com/airblade/vim-gitgutter.git \
+    https://github.com/ap/vim-buftabline.git \
+    https://github.com/tpope/vim-fugitive.git \
+    https://github.com/tpope/vim-surround.git \
+    https://github.com/easymotion/vim-easymotion.git \
+    https://github.com/luochen1990/rainbow.git \
+    https://github.com/ap/vim-css-color.git \
+    https://github.com/gregsexton/gitv.git \
+    https://github.com/tpope/vim-endwise.git \
+    https://github.com/michaeljsmith/vim-indent-object.git \
+    https://github.com/majutsushi/tagbar.git \
+    https://github.com/tyru/open-browser.vim.git \
+    https://github.com/flazz/vim-colorschemes.git \
+    https://github.com/scrooloose/syntastic.git \
+    https://github.com/tpope/vim-repeat.git \
+    https://github.com/nelstrom/vim-visual-star-search.git
+  do
+    echo "$url"
+    dest=~/.vim/bundle/"`basename "$url" .git`"
+    test -d "$dest" || git clone -q --single-branch --depth=1 "$url" "$dest"
+    ( cd "$dest" && git pull -q --ff-only )
+  done
+
+fi
