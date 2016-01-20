@@ -4,10 +4,7 @@ term "xterm-256color"
 vbell off
 
 hardstatus off
-caption always "%{wK} SCREEN  %-Lw%{wm} %n%f %t %{-} %+Lw%-06=  F12 "
-
-escape ^\|
-bindkey -k F2 command
+caption always "%{wK} SCREEN  %-Lw%{wm} %n%f %t %{-} %+Lw%-06= "
 
 maptimeout 0
 
