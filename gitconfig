@@ -6,6 +6,7 @@
 	ad = add -A
 	ap = add -p
 	au = add -u
+	ba = branch -a
 	bd = branch -D
 	bm = branch -m
 	br = branch
