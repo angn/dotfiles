@@ -24,6 +24,7 @@
 	dc = diff --cached -M -C -b
 	di = diff -M -C -b
 	dic = diff --cached -M -C -b
+	dl = show --name-status
 	dt = difftool
 	fix = commit --fixup HEAD
 	fp = fetch --all -t -p
