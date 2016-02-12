@@ -30,7 +30,7 @@
 	fp = fetch --all -t -p
 	h = help
 	lg = log --oneline --graph --decorate -20
-	lga = log --oneline --graph --decorate -20 --all
+	lga = log --oneline --graph --decorate --all
 	mt = mergetool
 	pick = cherry-pick --ff
 	re = rebase
