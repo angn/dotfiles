@@ -31,6 +31,8 @@
 	h = help
 	lg = log --oneline --graph --decorate -20
 	lga = log --oneline --graph --decorate --all
+	ma = merge --abort
+	mc = merge --continue
 	mt = mergetool
 	pick = cherry-pick --ff
 	re = rebase
