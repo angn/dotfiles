@@ -6,7 +6,7 @@ if exists(':Helptags')
 en
 
 se nocp hid tf lz wmnu pa=./**3
-se ru nu cc=81
+se ru sc nu cc=81
 se wh=3 wmw=20 wiw=80 noea so=5 siso=8
 se noswf ffs=unix,dos enc=utf-8 fencs=utf-8,cp949,latin1,ascii
 se ai si noet ts=4 sw=4 sts=0 sr ml mls=3
@@ -35,12 +35,6 @@ en
 
 if &t_Co >= 256 || has('gui_running')
   colo slate
-  hi StatusLineNC ctermfg=8 ctermbg=7
-  hi TabLine cterm=none ctermbg=8 ctermfg=0 gui=none guifg=gray40 guibg=#c2bfa5
-  hi TabLineFill ctermbg=0 ctermfg=8 guibg=black guifg=#c2bfa5
-  hi TabLineSel ctermfg=7 ctermbg=6 guifg=#c2bfa5 guibg=brown
-  hi BufTabLineActive ctermbg=8 ctermfg=7 guibg=#c2bfa5 guifg=black
-  hi VertSplit ctermfg=8 ctermbg=0
 endif
 
 if has('gui_win32')
@@ -64,7 +58,7 @@ vn P "0P
 nn <f2> :w<cr>
 ino <f2> <c-o>:w<cr>
 nn <f3> :NERDTreeFocus<cr>
-nn <f4> :clo<cr>
+nn <f4> :q<cr>
 nn <f5> :Run<cr>
 nn <f6> <c-^>
 nn <f7> :mak<cr>

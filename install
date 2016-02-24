@@ -31,15 +31,11 @@ then
     https://github.com/pbrisbin/vim-runfile.git \
     https://github.com/airblade/vim-gitgutter.git \
     https://github.com/ap/vim-buftabline.git \
-    https://github.com/tpope/vim-fugitive.git \
     https://github.com/tpope/vim-surround.git \
-    https://github.com/easymotion/vim-easymotion.git \
     https://github.com/luochen1990/rainbow.git \
     https://github.com/ap/vim-css-color.git \
-    https://github.com/gregsexton/gitv.git \
     https://github.com/tpope/vim-endwise.git \
     https://github.com/michaeljsmith/vim-indent-object.git \
-    https://github.com/majutsushi/tagbar.git \
     https://github.com/tyru/open-browser.vim.git \
     https://github.com/flazz/vim-colorschemes.git \
     https://github.com/scrooloose/syntastic.git \
