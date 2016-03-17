@@ -44,7 +44,7 @@
 	st = status -sb
 	up = pull --ff-only --all -t -p
 [push]
-	default = upstream
+	default = simple
 [core]
 	pager = less -FRSX
 [diff]
