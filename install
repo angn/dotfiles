@@ -26,7 +26,7 @@ then
     https://github.com/tpope/vim-sleuth.git \
     https://github.com/digitaltoad/vim-jade.git \
     https://github.com/slim-template/vim-slim.git \
-    https://github.com/kchmck/vim-coffee-script.git \
+    https://github.com/isRuslan/vim-es6.git \
     https://github.com/tpope/vim-commentary.git \
     https://github.com/pbrisbin/vim-runfile.git \
     https://github.com/airblade/vim-gitgutter.git \
