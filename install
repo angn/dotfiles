@@ -37,7 +37,6 @@ then
     https://github.com/tpope/vim-endwise.git \
     https://github.com/michaeljsmith/vim-indent-object.git \
     https://github.com/tyru/open-browser.vim.git \
-    https://github.com/flazz/vim-colorschemes.git \
     https://github.com/scrooloose/syntastic.git \
     https://github.com/tpope/vim-repeat.git \
     https://github.com/jiangmiao/auto-pairs.git \

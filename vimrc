@@ -33,8 +33,10 @@ if has("autocmd")
   filetype plugin indent on
 en
 
-if &t_Co >= 256 || has('gui_running')
+if has('gui_running')
   colo slate
+else
+  colo torte
 endif
 
 if has('gui_win32')
