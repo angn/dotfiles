@@ -21,11 +21,9 @@ let g:ctrlp_switch_buffer = '0'
 let g:ctrlp_max_files = 1000
 let g:ctrlp_max_depth = 3
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
-let g:buftabline_show = 1
-let g:buftabline_numbers = 2
 " let g:rainbow_active = 1
 let g:runfile_by_name = {
-\ 'Gruntfile.js': '!grunt --gruntfile %',
+\ 'gulpfile.js': '!gulp --gulpfile %',
 \ '.vimrc': 'so %',
 \ }
 
@@ -64,54 +62,34 @@ nn <f4> :q<cr>
 nn <f5> :Run<cr>
 nn <f6> <c-^>
 nn <f7> :mak<cr>
-nn <f8> :TagbarToggle<cr>
-nn <f9> :bp<cr>
-nn <f10> :bn<cr>
+nn <f8> :se paste!<cr>
+nn <f9> :cp<cr>
+nn <f10> :cn<cr>
+nn <f11> <nop>
+nn <f12> <nop>
 
 nn <up> gk
 nn <down> gj
-
-nn Q :CtrlPLine %<cr>
 nn 0 ^
-nn ( :bp<cr>
-nn ) :bn<cr>
-nn <c-n> :ene<cr>
-
-nn <leader>w :w<cr>
-nn <leader>a :wa<cr>
-nn <leader>q :qa<cr>
-nn <leader>x :xa<cr>
-nn <leader>z :sh<cr>
-nn <leader>d :bd<cr>
-nn <leader>e :NERDTreeFocus<cr>
-nn <leader>r :NERDTreeFind<cr>
-nn <leader>f <plug>(easymotion-s2)
-
-nn <leader>c <c-w>c
-nn <leader>s <c-w>s
-nn <leader>v <c-w>v
-nn <leader>o <c-w>o
-nn <leader>n <c-w>n
-nn <leader>- <c-w>_
-nn <leader>= <c-w>=
+nn Q :CtrlPLine %<cr>
 
 nn <leader>y :sil .w !pbcopy<cr>
 vn <leader>y :w !pbcopy<home>sil <cr>
 no <leader>p :r !pbpaste<cr>
 
-nn <leader>` <c-^>
-nn <leader>[ :bp<cr>
-nn <leader>] :bn<cr>
-nn <leader>1 :exe 'b'.buftabline#user_buffers()[0]<cr>
-nn <leader>2 :exe 'b'.buftabline#user_buffers()[1]<cr>
-nn <leader>3 :exe 'b'.buftabline#user_buffers()[2]<cr>
-nn <leader>4 :exe 'b'.buftabline#user_buffers()[3]<cr>
-nn <leader>5 :exe 'b'.buftabline#user_buffers()[4]<cr>
-nn <leader>6 :exe 'b'.buftabline#user_buffers()[5]<cr>
-nn <leader>7 :exe 'b'.buftabline#user_buffers()[6]<cr>
-nn <leader>8 :exe 'b'.buftabline#user_buffers()[7]<cr>
-nn <leader>9 :exe 'b'.buftabline#user_buffers()[8]<cr>
-nn <leader>0 :exe 'b'.buftabline#user_buffers()[9]<cr>
+nn <leader>` :ls<cr>
+nn ( :bp<cr>
+nn ) :bn<cr>
+nn <leader>1 1<c-^>
+nn <leader>2 2<c-^>
+nn <leader>3 3<c-^>
+nn <leader>4 4<c-^>
+nn <leader>5 5<c-^>
+nn <leader>6 6<c-^>
+nn <leader>7 7<c-^>
+nn <leader>8 8<c-^>
+nn <leader>9 9<c-^>
+nn <leader>0 10<c-^>
 
 ino <c-]> <c-o>f
 ino <c-b> <left>

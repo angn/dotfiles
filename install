@@ -30,7 +30,6 @@ then
     https://github.com/tpope/vim-commentary.git \
     https://github.com/pbrisbin/vim-runfile.git \
     https://github.com/airblade/vim-gitgutter.git \
-    https://github.com/ap/vim-buftabline.git \
     https://github.com/tpope/vim-surround.git \
     https://github.com/luochen1990/rainbow.git \
     https://github.com/ap/vim-css-color.git \
