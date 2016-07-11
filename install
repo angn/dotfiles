@@ -6,45 +6,12 @@ cd "`dirname "${BASH_SOURCE[0]}"`"
 for e in gitconfig vimrc screenrc tmux.conf; do
   src="$PWD"/$e
   dest=~/.$e
-  test ! -f "$src" || test -e "$dest" || echo "$e" && ln -s -f "$src" "$dest"
+  test ! -f "$src" || test -e "$dest" || ln -s -f "$src" "$dest"
 done
-
-echo .vim
-mkdir -p ~/.vim/{autoload,bundle}
 
 if vim --version | grep '^VIM - Vi IMproved 7\.[3-9] '
 then
-
-  echo pathogen
-  cd ~/.vim/autoload && curl -sLO https://tpo.pe/pathogen.vim
-
-  for url in \
-    https://github.com/scrooloose/nerdtree.git \
-    https://github.com/kien/ctrlp.vim.git \
-    https://github.com/fatih/vim-go.git \
-    https://github.com/wavded/vim-stylus.git \
-    https://github.com/tpope/vim-sleuth.git \
-    https://github.com/digitaltoad/vim-jade.git \
-    https://github.com/slim-template/vim-slim.git \
-    https://github.com/isRuslan/vim-es6.git \
-    https://github.com/tpope/vim-commentary.git \
-    https://github.com/pbrisbin/vim-runfile.git \
-    https://github.com/airblade/vim-gitgutter.git \
-    https://github.com/tpope/vim-surround.git \
-    https://github.com/luochen1990/rainbow.git \
-    https://github.com/ap/vim-css-color.git \
-    https://github.com/tpope/vim-endwise.git \
-    https://github.com/michaeljsmith/vim-indent-object.git \
-    https://github.com/tyru/open-browser.vim.git \
-    https://github.com/scrooloose/syntastic.git \
-    https://github.com/tpope/vim-repeat.git \
-    https://github.com/jiangmiao/auto-pairs.git \
-    https://github.com/nelstrom/vim-visual-star-search.git
-  do
-    echo "$url"
-    dest=~/.vim/bundle/"`basename "$url" .git`"
-    test -d "$dest" || git clone -q --single-branch --depth=1 "$url" "$dest"
-    ( cd "$dest" && git pull -q --ff-only )
-  done
-
+  mkdir -p ~/.vim/bundle
+  test -e "$_"/Vundle.vim/.git || git clone --single-branch --depth=1 https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  vim +PluginInstall +qa
 fi

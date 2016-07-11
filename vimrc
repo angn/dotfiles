@@ -1,11 +1,37 @@
+se nocp
+filetype off
+se rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+if exists(':Plugin')
+  Plugin 'VundleVim/Vundle.vim'
+  Plugin 'scrooloose/nerdtree'
+  Plugin 'kien/ctrlp.vim'
+  Plugin 'fatih/vim-go'
+  Plugin 'wavded/vim-stylus'
+  Plugin 'tpope/vim-sleuth'
+  Plugin 'digitaltoad/vim-jade'
+  Plugin 'slim-template/vim-slim'
+  Plugin 'isRuslan/vim-es6'
+  Plugin 'tpope/vim-commentary'
+  Plugin 'pbrisbin/vim-runfile'
+  Plugin 'airblade/vim-gitgutter'
+  Plugin 'tpope/vim-surround'
+  Plugin 'luochen1990/rainbow'
+  Plugin 'ap/vim-css-color'
+  Plugin 'tpope/vim-endwise'
+  Plugin 'michaeljsmith/vim-indent-object'
+  Plugin 'tyru/open-browser.vim'
+  Plugin 'scrooloose/syntastic'
+  Plugin 'tpope/vim-repeat'
+  Plugin 'jiangmiao/auto-pairs'
+  Plugin 'nelstrom/vim-visual-star-search'
+en
+call vundle#end()
+filetype plugin indent on
+
 so $VIMRUNTIME/macros/matchit.vim
 
-sil! exe pathogen#infect()
-if exists(':Helptags')
-  Helptags
-en
-
-se nocp hid tf lz wmnu pa=./**3
+se hid tf lz wmnu pa=./**3
 se ru sc nu cc=81
 se wh=3 wmw=20 wiw=80 noea so=5 siso=8
 se noswf ffs=unix,dos enc=utf-8 fencs=utf-8,cp949,latin1,ascii
@@ -26,10 +52,6 @@ let g:runfile_by_name = {
 \ 'gulpfile.js': '!gulp --gulpfile %',
 \ '.vimrc': 'so %',
 \ }
-
-if has("autocmd")
-  filetype plugin indent on
-en
 
 if has('gui_running')
   colo slate
