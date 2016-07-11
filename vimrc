@@ -92,7 +92,7 @@ nn <f12> <nop>
 
 nn <up> gk
 nn <down> gj
-nn 0 ^
+no 0 ^
 nn Q :CtrlPLine %<cr>
 
 nn <leader>y :sil .w !pbcopy<cr>
