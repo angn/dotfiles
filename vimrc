@@ -23,7 +23,6 @@ if exists(':Plugin')
   Plugin 'tyru/open-browser.vim'
   Plugin 'scrooloose/syntastic'
   Plugin 'tpope/vim-repeat'
-  Plugin 'jiangmiao/auto-pairs'
   Plugin 'nelstrom/vim-visual-star-search'
 en
 call vundle#end()
