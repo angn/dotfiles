@@ -24,6 +24,7 @@ if exists(':Plugin')
   Plugin 'scrooloose/syntastic'
   Plugin 'tpope/vim-repeat'
   Plugin 'nelstrom/vim-visual-star-search'
+  Plugin 'groenewege/vim-less'
 en
 call vundle#end()
 filetype plugin indent on
