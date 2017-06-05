@@ -35,7 +35,7 @@
 	mc = merge --continue
 	mt = mergetool
 	pick = cherry-pick --ff
-	re = rebase
+	re = rebase --autostash
 	rc = rebase --continue
 	ra = rebase --abort
 	ri = rebase -i --autosquash
