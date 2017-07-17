@@ -1,5 +1,7 @@
 se nocp
+
 filetype off
+
 se rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 if exists(':Plugin')
@@ -27,6 +29,7 @@ if exists(':Plugin')
   Plugin 'groenewege/vim-less'
 en
 call vundle#end()
+
 filetype plugin indent on
 
 so $VIMRUNTIME/macros/matchit.vim
@@ -34,7 +37,7 @@ so $VIMRUNTIME/macros/matchit.vim
 se hid tf lz wmnu pa=./**3
 se ru sc nu cc=81
 se wh=3 wmw=20 wiw=80 noea so=5 siso=8
-se noswf ffs=unix,dos enc=utf-8 fencs=utf-8,cp949,latin1,ascii
+se noswf ffs=unix,dos enc=utf-8 fencs=utf-8,cp949,latin1
 se ai si noet ts=4 sw=4 sts=0 sr ml mls=3
 se is ic scs
 se bs=indent,eol,start nf-=octal pt=<f9> cb=unnamed
@@ -79,7 +82,7 @@ vn P "0P
 
 nn <f2> :w<cr>
 ino <f2> <c-o>:w<cr>
-nn <f3> :NERDTreeFocus<cr>
+nn <f3> :NERDTreeFind<cr>
 nn <f4> :q<cr>
 nn <f5> :Run<cr>
 nn <f6> <c-^>
@@ -100,8 +103,6 @@ vn <leader>y :w !pbcopy<home>sil <cr>
 no <leader>p :r !pbpaste<cr>
 
 nn <leader>` :ls<cr>
-nn ( :bp<cr>
-nn ) :bn<cr>
 nn <leader>1 1<c-^>
 nn <leader>2 2<c-^>
 nn <leader>3 3<c-^>
