@@ -77,26 +77,26 @@ nn <c-j> <c-w>j
 nn <c-k> <c-w>k
 nn <c-l> <c-w>l
 
-vn X "_x
-vn P "0P
-
 nn <f2> :w<cr>
 ino <f2> <c-o>:w<cr>
 nn <f3> :NERDTreeFind<cr>
 nn <f4> :q<cr>
 nn <f5> :Run<cr>
-nn <f6> <c-^>
+nn <f6> <c-w>p
 nn <f7> :mak<cr>
-nn <f8> :se paste!<cr>
+no <f8> @:
 nn <f9> :cp<cr>
 nn <f10> :cn<cr>
 nn <f11> <nop>
 nn <f12> <nop>
 
-nn <up> gk
-nn <down> gj
+no <up> gk
+no <down> gj
 no 0 ^
-nn Q :CtrlPLine %<cr>
+no _ :se paste!<cr>
+vn _ "_x
+nn Q @q
+vn Q :norm @q<cr>
 
 nn <leader>y :sil .w !pbcopy<cr>
 vn <leader>y :w !pbcopy<home>sil <cr>
