@@ -40,7 +40,7 @@ se wh=3 wmw=20 wiw=80 noea so=5 siso=8
 se noswf ffs=unix,dos enc=utf-8 fencs=utf-8,cp949,latin1
 se ai si noet ts=4 sw=4 sts=0 sr ml mls=3
 se is ic scs
-se bs=indent,eol,start nf-=octal pt=<f9> cb=unnamed
+se bs=indent,eol,start nf-=octal pt=<f12> cb=unnamed
 se ttm=100 mouse=a
 
 sy enable
@@ -87,14 +87,13 @@ nn <f7> :mak<cr>
 no <f8> @:
 nn <f9> :cp<cr>
 nn <f10> :cn<cr>
-nn <f11> <nop>
-nn <f12> <nop>
+nn <f11> :se wrap!<cr>
+nn <f12> :se paste!<cr>
 
 no <up> gk
 no <down> gj
 no 0 ^
-no _ :se paste!<cr>
-vn _ "_x
+vn D "_d
 nn Q @q
 vn Q :norm @q<cr>
 
