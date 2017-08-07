@@ -4,7 +4,7 @@ set -eu
 if type -p zsh; then
 	sudo chsh -s "`type -p zsh`"
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-	sed --in-place='' -e '/^ZSH_THEME="roubyrussell"$/cZSH_THEME="clean"' -e '/^plugins=/cplugins=(git z)' ~/.zshrc
+	sed -i '' 's/^ZSH_THEME=.*/ZSH_THEME="clean"/' ~/.zshrc
 fi
 
 cd "`dirname "${BASH_SOURCE[0]}"`"
