@@ -55,6 +55,9 @@ let g:runfile_by_name = {
 \ 'gulpfile.js': '!gulp --gulpfile %',
 \ '.vimrc': 'so %',
 \ }
+let g:runfile_by_type = {
+\ 'javascript': '!node %',
+\ }
 
 if has('gui_running')
   colo slate
