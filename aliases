@@ -8,6 +8,8 @@ alias ki.batch='tmux-cssh -ns kinsight-batch-gs01'
 
 alias kp.alpha='tmux-cssh -ns kpusher-alpha-vm{1,2}'
 alias kp.sandbox='tmux-cssh -ns kpusher-sandbox-vm{1,2}'
+alias kp.app='tmux-cssh -ns {gs,pg}-kpusher-app{001..020}'
+alias kp.third='tmux-cssh -ns {gs,pg}-kpusher-third{001,002}'
 alias kp.gcm='tmux-cssh -ns {gs,pg}-kpusher-gcm{001..005}'
 alias kp.apns='tmux-cssh -ns {gs-kpusher,kpp}-apns{001..008}'
 alias kp.aom='tmux-cssh -ns {gs,pg}-kpusher-aom001'
