@@ -29,8 +29,8 @@
 	fix = commit --fixup HEAD
 	fp = fetch --all -t -p
 	h = help
-	lg = log --oneline --graph --decorate
-	lga = log --oneline --graph --decorate --all
+	lg = log --oneline --graph --decorate --date-order
+	lga = log --oneline --graph --decorate --all --date-order
 	ma = merge --abort
 	mc = merge --continue
 	mt = mergetool
