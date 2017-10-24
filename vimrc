@@ -40,7 +40,7 @@ se wh=3 wmw=20 wiw=80 noea so=5 siso=8
 se noswf ffs=unix,dos enc=utf-8 fencs=utf-8,cp949,latin1
 se ai si noet ts=4 sw=4 sts=0 sr ml mls=3
 se is ic scs
-se bs=indent,eol,start nf-=octal pt=<f12> cb=unnamed
+se bs=indent,eol,start nf-=octal cb=unnamed
 se ttm=100 mouse=a
 
 sy enable
@@ -82,7 +82,7 @@ nn <c-l> <c-w>l
 
 nn <f2> :w<cr>
 ino <f2> <c-o>:w<cr>
-nn <f3> :NERDTreeFind<cr>
+nn <f3> :NERDTreeFocus<cr>
 nn <f4> :q<cr>
 nn <f5> :Run<cr>
 nn <f6> <c-w>p
@@ -92,6 +92,8 @@ nn <f9> :cp<cr>
 nn <f10> :cn<cr>
 nn <f11> :se wrap!<cr>
 nn <f12> :se paste!<cr>
+vn <f12> :w !pbcopy<cr>
+ino <f12> <c-o>:r !pbpaste<cr>
 
 no <up> gk
 no <down> gj
@@ -100,9 +102,7 @@ vn D "_d
 nn Q @q
 vn Q :norm @q<cr>
 
-nn <leader>y :sil .w !pbcopy<cr>
-vn <leader>y :w !pbcopy<home>sil <cr>
-no <leader>p :r !pbpaste<cr>
+nn <leader>f :NERDTreeFind<cr>
 
 nn <leader>` :ls<cr>
 nn <leader>1 1<c-^>
@@ -117,6 +117,8 @@ nn <leader>9 9<c-^>
 nn <leader>0 10<c-^>
 
 ino <c-]> <c-o>f
+ino <c-a> <c-o>^
+ino <c-e> <c-o>$
 ino <c-b> <left>
 ino <c-f> <right>
 
