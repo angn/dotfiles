@@ -85,15 +85,18 @@ ino <f2> <c-o>:w<cr>
 nn <f3> :NERDTreeFocus<cr>
 nn <f4> :q<cr>
 nn <f5> :Run<cr>
-nn <f6> <c-w>p
+nn <f6> <c-^>
 nn <f7> :mak<cr>
 no <f8> @:
 nn <f9> :cp<cr>
 nn <f10> :cn<cr>
-nn <f11> :se wrap!<cr>
-nn <f12> :se paste!<cr>
-vn <f12> :w !pbcopy<cr>
-ino <f12> <c-o>:r !pbpaste<cr>
+nn <f11> :sp<cr>
+nn <f12> :e ~/.vimrc<cr>
+
+nn <leader>w :se wrap!<cr>
+nn <leader>s :se paste!<cr>
+map <leader>c :w !pbcopy\|\|clip<cr>
+nn <leader>p :r !pbpaste\|\|paste<cr>
 
 no <up> gk
 no <down> gj
