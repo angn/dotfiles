@@ -90,12 +90,12 @@ nn <f7> :mak<cr>
 no <f8> @:
 nn <f9> :cp<cr>
 nn <f10> :cn<cr>
-nn <f11> :sp<cr>
+nn <f11> <c-w>_<c-w>\|
 nn <f12> :e ~/.vimrc<cr>
 
 nn <leader>w :se wrap!<cr>
-nn <leader>s :se paste!<cr>
-map <leader>c :w !pbcopy\|\|clip<cr>
+nn <leader>t :se paste!<cr>
+map <leader>y :w !pbcopy\|\|clip<cr>
 nn <leader>p :r !pbpaste\|\|paste<cr>
 
 no <up> gk
