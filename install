@@ -2,7 +2,7 @@
 set -eu
 
 if type -p zsh; then
-	sudo chsh -s "`type -p zsh`"
+	chsh -s "`type -p zsh`"
 	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	sed -i '' 's/^ZSH_THEME=.*/ZSH_THEME="clean"/' ~/.zshrc
 fi

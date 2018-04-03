@@ -27,6 +27,7 @@ if exists(':Plugin')
   Plugin 'tpope/vim-repeat'
   Plugin 'nelstrom/vim-visual-star-search'
   Plugin 'groenewege/vim-less'
+  Plugin 'rizzatti/dash.vim'
 en
 call vundle#end()
 
@@ -97,6 +98,7 @@ nn <leader>w :se wrap!<cr>
 nn <leader>t :se paste!<cr>
 map <leader>y :w !pbcopy\|\|clip<cr>
 nn <leader>p :r !pbpaste\|\|paste<cr>
+nm <silent> <leader>d <Plug>DashSearch
 
 no <up> gk
 no <down> gj
