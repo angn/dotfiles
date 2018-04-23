@@ -41,6 +41,8 @@
 	ri = rebase -i --autosquash
 	rh = reset --hard
 	rp = reset -p
+	rs = reset
+	rw = commit --amend -m
 	st = status -sb
 	up = pull --ff-only --all -t -p
 [push]
