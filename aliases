@@ -1,6 +1,6 @@
 #!/bin/bash
 
-alias ki.event='tmux-cssh -ns kinsight-event-{gs,pg}{01..03}'
+alias ki.event='tmux-cssh -ns kinsight-event-{gs{01,03,04},pg{01..03}}'
 alias ki.analyzer='tmux-cssh -ns kinsight-analyzer-{gs,pg}01'
 alias ki.api='tmux-cssh -ns kinsight-api-gs{01..02}'
 alias ki.openapi='tmux-cssh -ns kinsight-release{01..02}'
