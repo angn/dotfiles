@@ -56,4 +56,4 @@ alias km.safenum='tmux-cssh -ns {kims-safenum{01..02},hyena{066,067}}.dakao.io'
 alias km.gw='tmux-cssh -ns kims-gw{01..02}.dakao.io'
 alias km.mq='tmux-cssh -ns {kims-mq{001..002},atom{002,003}}.dakao.io'
 
-alias ka.api='tmux-cssh -ns kanu-api{1,2,3}'
+alias kn.api='tmux-cssh -ns kanu-api{1,2,3}'
