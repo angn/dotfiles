@@ -28,6 +28,8 @@ if exists(':Plugin')
   Plugin 'nelstrom/vim-visual-star-search'
   Plugin 'groenewege/vim-less'
   Plugin 'rizzatti/dash.vim'
+  Plugin 'leafgarland/typescript-vim'
+  Plugin 'peitalin/vim-jsx-typescript'
 en
 call vundle#end()
 
