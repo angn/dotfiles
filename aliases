@@ -35,7 +35,6 @@ alias kp.capri.gcm='tmux-cssh -ns kpusher-capri-gcm{001..002}'
 alias kp.capri.apns='tmux-cssh -ns kpusher-capri-apns{001..002}'
 alias kp.capri.feedback='tmux-cssh -ns kpusher-capri-feedback001'
 
-alias fr.console='tmux-cssh -ns frisb-console-pg{001..002}'
 alias fr.controller='tmux-cssh -ns frisb-controller-pg{001..003}'
 alias fr.invoker='tmux-cssh -ns frisb-invoker-pg{001..008}'
 alias fr.kafka='tmux-cssh -ns frisb-kafka-pg{001..003}'
