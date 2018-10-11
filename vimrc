@@ -2,36 +2,36 @@ se nocp
 
 filetype off
 
-se rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-if exists(':Plugin')
-  Plugin 'VundleVim/Vundle.vim'
-  Plugin 'scrooloose/nerdtree'
-  Plugin 'kien/ctrlp.vim'
-  Plugin 'fatih/vim-go'
-  Plugin 'wavded/vim-stylus'
-  Plugin 'tpope/vim-sleuth'
-  Plugin 'digitaltoad/vim-jade'
-  Plugin 'slim-template/vim-slim'
-  Plugin 'isRuslan/vim-es6'
-  Plugin 'tpope/vim-commentary'
-  Plugin 'pbrisbin/vim-runfile'
-  Plugin 'airblade/vim-gitgutter'
-  Plugin 'tpope/vim-surround'
-  Plugin 'luochen1990/rainbow'
-  Plugin 'ap/vim-css-color'
-  Plugin 'tpope/vim-endwise'
-  Plugin 'michaeljsmith/vim-indent-object'
-  Plugin 'tyru/open-browser.vim'
-  Plugin 'scrooloose/syntastic'
-  Plugin 'tpope/vim-repeat'
-  Plugin 'nelstrom/vim-visual-star-search'
-  Plugin 'groenewege/vim-less'
-  Plugin 'rizzatti/dash.vim'
-  Plugin 'leafgarland/typescript-vim'
-  Plugin 'peitalin/vim-jsx-typescript'
+call plug#begin('~/.vim/plugged')
+if exists(':Plug')
+  Plug 'scrooloose/nerdtree'
+  Plug 'kien/ctrlp.vim'
+  Plug 'fatih/vim-go'
+  Plug 'wavded/vim-stylus'
+  Plug 'tpope/vim-sleuth'
+  Plug 'digitaltoad/vim-jade'
+  Plug 'slim-template/vim-slim'
+  Plug 'isRuslan/vim-es6'
+  Plug 'tpope/vim-commentary'
+  Plug 'pbrisbin/vim-runfile'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'tpope/vim-surround'
+  Plug 'luochen1990/rainbow'
+  Plug 'ap/vim-css-color'
+  Plug 'tpope/vim-endwise'
+  Plug 'michaeljsmith/vim-indent-object'
+  Plug 'tyru/open-browser.vim'
+  Plug 'scrooloose/syntastic'
+  Plug 'tpope/vim-repeat'
+  Plug 'nelstrom/vim-visual-star-search'
+  Plug 'groenewege/vim-less'
+  Plug 'rizzatti/dash.vim'
+  Plug 'leafgarland/typescript-vim'
+  Plug 'peitalin/vim-jsx-typescript'
+  Plug 'keith/swift.vim'
+  Plug 'junegunn/seoul256.vim'
 en
-call vundle#end()
+call plug#end()
 
 filetype plugin indent on
 
