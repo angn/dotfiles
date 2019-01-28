@@ -30,6 +30,7 @@ if exists(':Plug')
   Plug 'peitalin/vim-jsx-typescript'
   Plug 'keith/swift.vim'
   Plug 'junegunn/seoul256.vim'
+  Plug 'chr4/nginx.vim'
 en
 call plug#end()
 
