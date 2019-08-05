@@ -6,13 +6,11 @@ if test $# = 0; then
 fi
 
 for host in "$@"; do
-	echo "* Connecting '$host'"
-	if test "${nonfirst:-}"; then
-		tmux neww "ssh $host" || tmux new -d "ssh $host"
-		nonfirst=1
-	else
-		tmux splitw "ssh $host" \; selectl tiled
-	fi
+	cmd="ssh $host"
+	case ${first:-Y} in
+	Y) tmux neww "$cmd" || tmux new -d "$cmd"; first=N ;;
+	*) tmux splitw "$cmd" \; selectl tiled ;;
+	esac
 done
 
 tmux setw synchronize-panes on \; attach
