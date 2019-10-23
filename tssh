@@ -13,4 +13,4 @@ for host in "$@"; do
 	esac
 done
 
-tmux setw synchronize-panes on \; attach
+tmux renamew "$1..($#)" \; setw synchronize-panes on \; attach
