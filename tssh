@@ -1,16 +1,18 @@
-#!/bin/bash -eux
+#!/bin/bash -eu
 
-if test $# = 0; then
-	echo "usage: `basename $0` [user@]host ..." >&2
+test $# = 0 && {
+	echo "usage: $0 [user@]host ..."
 	exit 2
-fi
+} >&2
+
+set -x
+
+name="p$$-$RANDOM"
 
 for host in "$@"; do
 	cmd="ssh $host"
-	case ${first:-Y} in
-	Y) tmux neww "$cmd" || tmux new -d "$cmd"; first=N ;;
-	*) tmux splitw "$cmd" \; selectl tiled ;;
-	esac
+	test "${others:-}" && tmux new -s "$name" -d "$cmd" || tmux splitw "$cmd" \; selectl tiled
+	others=1
 done
 
-tmux renamew "$1..($#)" \; setw synchronize-panes on \; attach
+tmux renamew "$1..{$#}" \; setw synchronize-panes on \; attach -t "$name"
