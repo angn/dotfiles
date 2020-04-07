@@ -7,12 +7,10 @@ test $# = 0 && {
 
 set -x
 
-name="p$$-$RANDOM"
+args=(new -n "$1..{$#}" "ssh $1")
 
-for host in "$@"; do
-	cmd="ssh $host"
-	test "${others:-}" && tmux new -s "$name" -d "$cmd" || tmux splitw "$cmd" \; selectl tiled
-	others=1
+for host in "${@:2}"; do
+	args+=(\; splitw "ssh $host" \; selectl tiled)
 done
 
-tmux renamew "$1..{$#}" \; setw synchronize-panes on \; attach -t "$name"
+exec tmux "${args[@]}" \; setw synchronize-panes on
