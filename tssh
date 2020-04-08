@@ -7,10 +7,9 @@ test $# = 0 && {
 
 set -x
 
-args=(new -n "$1..{$#}" "ssh $1")
-
+commands=()
 for host in "${@:2}"; do
-	args+=(\; splitw "ssh $host" \; selectl tiled)
+	commands+=(\; splitw "ssh $host" \; selectl tiled)
 done
 
-exec tmux "${args[@]}" \; setw synchronize-panes on
+exec tmux new -n "$1..${@: -1}{$#}" "ssh $1" "${commands[@]}" \; setw synchronize-panes on
