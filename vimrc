@@ -51,7 +51,7 @@ sy enable
 
 let g:netrw_preview = 1
 let g:ctrlp_switch_buffer = '0'
-let g:ctrlp_max_files = 10000
+let g:ctrlp_max_files = 1000
 " let g:rainbow_active = 1
 let g:runfile_by_name = {
 \ 'gulpfile.js': '!gulp --gulpfile %',
