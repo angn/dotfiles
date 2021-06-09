@@ -1,0 +1,33 @@
+#!/bin/bash -eu
+
+test $# = 0 && {
+	echo "usage: $0 <kubectl_get_options>"
+	exit 2
+} >&2
+
+o=(.)
+p=(.)
+c=(-- sh)
+while test $# -gt 0; do
+	case $1 in
+	--)    c=("$@"); shift $# ;;
+	--*=*) o+=("$1") ;;
+	--*)   o+=("$1" "$2"); shift ;;
+	*)     p+=("$1") ;;
+	esac
+	shift
+done
+
+set -- $(kubectl get po -o go-template='{{range .items}}{{.metadata.namespace}} {{.metadata.name}} {{end}}' "${o[@]:1}" "${p[@]:1}")
+
+test $# = 0 && {
+	echo "$0: No such pod"
+	exit
+}
+
+a=(new -n "$1:$2...($(expr $# / 2))" "kubectl ${o[*]:1} exec -it -n $1 $2 ${c[*]}")
+while shift 2 && test $# -gt 0; do
+	a+=(\; splitw "kubectl ${o[*]:1} exec -it -n $1 $2 ${c[*]}" \; selectl tiled)
+done
+
+exec tmux "${a[@]}" \; setw synchronize-panes on
