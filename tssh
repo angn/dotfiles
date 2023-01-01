@@ -9,9 +9,9 @@ test $# = 1 && exec ssh "$1"
 
 set -x
 
-commands=(new -n "$1..${@: -1}{$#}" "ssh $1")
+args=()
 for host in "${@:2}"; do
-	commands+=(\; splitw "ssh $host" \; selectl tiled)
+	args+=(\; splitw "ssh $host" \; selectl tiled)
 done
 
-exec tmux "${commands[@]}" \; setw synchronize-panes on
+tmux new -n "$1(+$(($#-1)))" "ssh $1" "${args[@]}" \; setw synchronize-panes on
