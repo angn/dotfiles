@@ -1,5 +1,6 @@
 #!/bin/bash -eux
-exec openssl req -x509 -out localhost.crt -keyout localhost.key \
-	-newkey rsa:2048 -nodes -sha256 \
-	-subj '/CN=localhost' -extensions EXT -config <( \
-		printf "[dn]\nCN=localhost\n[req]\ndistinguished_name = dn\n[EXT]\nsubjectAltName=DNS:localhost\nkeyUsage=digitalSignature\nextendedKeyUsage=serverAuth")
+test -n "${1:-}"
+exec openssl req -x509 -out "$1".crt -keyout "$1".key \
+	-newkey rsa:2048 -nodes -sha256 -days 36500 \
+	-subj "/CN=$1" -extensions EXT -config <( \
+		printf "[dn]\nCN=$1\n[req]\ndistinguished_name = dn\n[EXT]\nsubjectAltName=DNS:$1\nkeyUsage=digitalSignature\nextendedKeyUsage=serverAuth")
