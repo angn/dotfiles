@@ -50,7 +50,7 @@
 	default = simple
 [core]
 	pager = less -FRSX
-	autocrlf = input
+	autocrlf = false
 [diff]
 	tool = vimdiff
 [merge]
