@@ -5,7 +5,7 @@ filetype off
 call plug#begin('~/.vim/plugged')
 if exists(':Plug')
   Plug 'scrooloose/nerdtree'
-  Plug 'kien/ctrlp.vim'
+  Plug 'ctrlpvim/ctrlp.vim'
   Plug 'fatih/vim-go'
   Plug 'wavded/vim-stylus'
   Plug 'tpope/vim-sleuth'
@@ -29,7 +29,7 @@ if exists(':Plug')
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
   Plug 'keith/swift.vim'
-  Plug 'junegunn/seoul256.vim'
+  " Plug 'junegunn/seoul256.vim'
   Plug 'chr4/nginx.vim'
 en
 call plug#end()
@@ -63,8 +63,8 @@ let g:runfile_by_type = {
 
 if has('gui_running')
   colo slate
-else
-  colo torte
+" else
+  " colo torte
 endif
 
 if has('gui_win32')
