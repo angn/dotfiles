@@ -1,4 +1,5 @@
 #!/bin/bash -eux
+ln -s ~/conf/gitignore ~/.gitignore
 ln -s ~/conf/gitconfig ~/.gitconfig
 ln -s ~/conf/my.cnf ~/.my.cnf
 ln -s ~/conf/tmux.conf ~/.tmux.conf
