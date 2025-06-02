@@ -1,0 +1,14 @@
+if nerdctl --version 2> /dev/null >&2; then
+	alias docker=nerdctl
+fi
+
+alias kdk='kubectl diff -k'
+alias kak='kubectl apply -k'
+alias kgew='kubectl get events -w'
+alias kgnowide='kubectl get nodes -o wide'
+alias kgawide='kubectl get all -o wide'
+alias krr='kubectl rollout restart'
+alias krr='kubectl rollout status'
+alias krun='kubectl run -it --rm --restart=Never --image-pull-policy=IfNotPresent --image=curlimages/curl curl-$RANDOM-$$ -- sh'
+alias keit='kubectl exec -it'
+# alias kgponode='kubectl get po -o wide -A --field-selector spec.nodeName='
