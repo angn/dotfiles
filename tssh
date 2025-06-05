@@ -1,17 +1,14 @@
 #!/bin/bash -eu
 
-test $# = 0 && {
-	echo "usage: $0 [user@]host ..."
+if [ $# = 0 ]; then
+	echo >&2 "usage: $0 [user@]host ..."
 	exit 2
-} >&2
+fi
 
-test $# = 1 && exec ssh "$1"
+commands=(new -n "$1~($#)" "ssh $1" \;)
 
-set -x
-
-args=()
-for host in "${@:2}"; do
-	args+=(\; splitw "ssh $host" \; selectl tiled)
+for destination in "${@:2}"; do
+	commands+=(splitw -l 999 "ssh $destination" \;)
 done
 
-tmux new -n "$1(+$(($#-1)))" "ssh $1" "${args[@]}" \; setw synchronize-panes on
+exec tmux "${commands[@]}" \; selectl tiled \; setw synchronize-panes on
