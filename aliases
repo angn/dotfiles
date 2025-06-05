@@ -12,3 +12,7 @@ alias krr='kubectl rollout status'
 alias krun='kubectl run -it --rm --restart=Never --image-pull-policy=IfNotPresent --image=curlimages/curl curl-$RANDOM-$$ -- sh'
 alias keit='kubectl exec -it'
 # alias kgponode='kubectl get po -o wide -A --field-selector spec.nodeName='
+
+if which explorer.exe 2> /dev/null >&2; then
+	alias open=explorer.exe
+fi
