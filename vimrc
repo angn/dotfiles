@@ -84,7 +84,7 @@ nn <c-l> <c-w>l
 
 nn <f2> :w<cr>
 ino <f2> <c-o>:w<cr>
-nn <f3> :NERDTreeFocus<cr>
+nn <f3> :NERDTreeFind<cr>
 nn <f4> :q<cr>
 nn <f5> :Run<cr>
 nn <f6> <c-^>
@@ -107,8 +107,6 @@ no 0 ^
 vn D "_d
 nn Q @q
 vn Q :norm @q<cr>
-
-nn <leader>f :NERDTreeFind<cr>
 
 nn <leader>` :ls<cr>
 nn <leader>1 1<c-^>
