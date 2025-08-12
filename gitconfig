@@ -39,13 +39,13 @@
 	re = rebase --autostash
 	rc = rebase --continue
 	ra = rebase --abort
-	ri = rebase -i --autosquash
+	ri = rebase -i --autostash
 	rh = reset --hard
 	rp = reset -p
 	rs = reset
 	rw = commit --amend -m
 	st = status -sb
-	up = pull --ff-only --all -t -p
+	up = pull --ff-only --all -t -p --autostash
 [push]
 	default = simple
 [core]
