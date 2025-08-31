@@ -1,16 +1,12 @@
-se nocp
-
-filetype off
+unlet! skip_defaults_vim
+source $VIMRUNTIME/defaults.vim
 
 call plug#begin('~/.vim/plugged')
 if exists(':Plug')
   Plug 'scrooloose/nerdtree'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'fatih/vim-go'
-  Plug 'wavded/vim-stylus'
   Plug 'tpope/vim-sleuth'
-  Plug 'digitaltoad/vim-jade'
-  Plug 'slim-template/vim-slim'
   Plug 'isRuslan/vim-es6'
   Plug 'tpope/vim-commentary'
   Plug 'pbrisbin/vim-runfile'
@@ -24,110 +20,106 @@ if exists(':Plug')
   Plug 'scrooloose/syntastic'
   Plug 'tpope/vim-repeat'
   Plug 'nelstrom/vim-visual-star-search'
-  Plug 'groenewege/vim-less'
   Plug 'rizzatti/dash.vim'
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
   Plug 'keith/swift.vim'
-  " Plug 'junegunn/seoul256.vim'
   Plug 'chr4/nginx.vim'
-en
+  Plug 'yegappan/lsp'
+  Plug 'mattn/vim-lsp-settings'
+  Plug 'prabirshrestha/asyncomplete.vim'
+  Plug 'prabirshrestha/asyncomplete-lsp.vim'
+  Plug 'jiangmiao/auto-pairs'
+  Plug 'bluz71/vim-mistfly-statusline'
+endif
 call plug#end()
 
-filetype plugin indent on
+packadd! matchit
 
-so $VIMRUNTIME/macros/matchit.vim
-
-se hid tf lz wmnu pa=./**3
-se ru sc nu cc=81
-se wh=3 wmw=20 wiw=80 noea so=5 siso=8
-se noswf ffs=unix,dos enc=utf-8 fencs=utf-8,cp949,latin1
-se ai si noet ts=4 sw=4 sts=0 sr ml mls=3
-se is ic scs
-se bs=indent,eol,start nf-=octal cb=unnamed
-se ttm=100 mouse=a
-
-sy enable
+set hidden ttyfast lazyredraw path=./**3
+set termguicolors
+set number relativenumber colorcolumn=81
+set winheight=3 winminwidth=20 winwidth=80 noequalalways sidescrolloff=8
+set noswapfile fileformats=unix,dos encoding=utf-8 fileencodings=utf-8,cp949,latin1
+set autoindent smartindent noexpandtab tabstop=4 shiftwidth=4 softtabstop=0 shiftround
+set modeline modelines=3
+set incsearch ignorecase smartcase
+set clipboard=unnamed
+set mouse=a
+set noshowmode laststatus=2
 
 let g:netrw_preview = 1
+
 let g:ctrlp_switch_buffer = '0'
 let g:ctrlp_max_files = 1000
-" let g:rainbow_active = 1
+
+let g:rainbow_active = 1
+
 let g:runfile_by_name = {
 \ 'gulpfile.js': '!gulp --gulpfile %',
 \ '.vimrc': 'so %',
 \ }
+
 let g:runfile_by_type = {
 \ 'javascript': '!node %',
 \ }
 
-if has('gui_running')
-  colo slate
-" else
-  " colo torte
-endif
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 
-if has('gui_win32')
-  nn <m-space> :simalt ~<cr>
-  se noimd imi=1 ims=-1
-  se go-=T gfn=Consolas:h13
-en
+colo sorbet
 
-if has('gui_macvim')
-  se gfn=Menlo\ Regular:h17
-en
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
 
-nn <c-h> <c-w>h
-nn <c-j> <c-w>j
-nn <c-k> <c-w>k
-nn <c-l> <c-w>l
+nnoremap <f2> :w<cr>
+inoremap <f2> <c-o>:w<cr>
+nnoremap <f3> :if exists("t:NERDTreeBufName")\|NERDTreeFind\|else\|NERDTreeCWD\|endif<cr>
+nnoremap <f4> :q<cr>
+nnoremap <f5> :Run<cr>
+nnoremap <f6> <c-^>
+nnoremap <f7> :mak<cr>
+noremap <f8> @:
+nnoremap <f9> :cp<cr>
+nnoremap <f10> :cn<cr>
+nnoremap <f11> <c-w>_<c-w>\|
+nnoremap <f12> :e ~/.vimrc<cr>
 
-nn <f2> :w<cr>
-ino <f2> <c-o>:w<cr>
-nn <f3> :NERDTreeFind<cr>
-nn <f4> :q<cr>
-nn <f5> :Run<cr>
-nn <f6> <c-^>
-nn <f7> :mak<cr>
-no <f8> @:
-nn <f9> :cp<cr>
-nn <f10> :cn<cr>
-nn <f11> <c-w>_<c-w>\|
-nn <f12> :e ~/.vimrc<cr>
-
-nn <leader>w :se wrap!<cr>
-nn <leader>t :se paste!<cr>
+nnoremap <leader>w :se wrap!<cr>
+nnoremap <leader>t :se paste!<cr>
 map <leader>y :w !pbcopy\|\|clip<cr>
-nn <leader>p :r !pbpaste\|\|paste<cr>
-nm <silent> <leader>d <Plug>DashSearch
+nnoremap <leader>p :r !pbpaste\|\|paste<cr>
+nmap <silent> <leader>d <Plug>DashSearch
 
-no <up> gk
-no <down> gj
-no 0 ^
-vn D "_d
-nn Q @q
-vn Q :norm @q<cr>
+noremap <up> gk
+noremap <down> gj
+noremap 0 ^
+vnoremap D "_d
+nnoremap Q @q
+vnoremap Q :norm @q<cr>
 
-nn <leader>` :ls<cr>
-nn <leader>1 1<c-^>
-nn <leader>2 2<c-^>
-nn <leader>3 3<c-^>
-nn <leader>4 4<c-^>
-nn <leader>5 5<c-^>
-nn <leader>6 6<c-^>
-nn <leader>7 7<c-^>
-nn <leader>8 8<c-^>
-nn <leader>9 9<c-^>
-nn <leader>0 10<c-^>
+nnoremap <leader>` :ls<cr>
+nnoremap <leader>1 1<c-^>
+nnoremap <leader>2 2<c-^>
+nnoremap <leader>3 3<c-^>
+nnoremap <leader>4 4<c-^>
+nnoremap <leader>5 5<c-^>
+nnoremap <leader>6 6<c-^>
+nnoremap <leader>7 7<c-^>
+nnoremap <leader>8 8<c-^>
+nnoremap <leader>9 9<c-^>
+nnoremap <leader>0 10<c-^>
 
-ino <c-]> <c-o>f
-ino <c-a> <c-o>^
-ino <c-e> <c-o>$
-ino <c-b> <left>
-ino <c-f> <right>
+inoremap <c-]> <c-o>f
+inoremap <c-a> <c-o>^
+inoremap <c-e> <c-o>$
+inoremap <c-b> <left>
+inoremap <c-f> <right>
 
-nn <c-_> :Commentary<cr>
-vm <c-_> gcgv
-ino <c-_> <c-o>:Commentary<cr>
+nnoremap <c-_> :Commentary<cr>
+vmap <c-_> gcgv
+inoremap <c-_> <c-o>:Commentary<cr>
 
 map gx <plug>(openbrowser-smart-search)
