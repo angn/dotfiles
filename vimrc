@@ -67,7 +67,8 @@ let g:runfile_by_type = {
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 
-colo sorbet
+set notermguicolors
+colorscheme sorbet
 
 nnoremap <c-h> <c-w>h
 nnoremap <c-j> <c-w>j
