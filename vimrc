@@ -37,7 +37,6 @@ call plug#end()
 packadd! matchit
 
 set hidden ttyfast lazyredraw path=./**3
-set termguicolors
 set number relativenumber colorcolumn=81
 set winheight=3 winminwidth=20 winwidth=80 noequalalways sidescrolloff=8
 set noswapfile fileformats=unix,dos encoding=utf-8 fileencodings=utf-8,cp949,latin1
@@ -67,7 +66,10 @@ let g:runfile_by_type = {
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 
-set notermguicolors
+if $TERM_PROGRAM != "Apple_Terminal"
+  set termguicolors
+endif
+
 colorscheme sorbet
 
 nnoremap <c-h> <c-w>h
