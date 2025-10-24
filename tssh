@@ -8,7 +8,7 @@ fi
 commands=(new -n "$1~($#)" "ssh $1" \;)
 
 for destination in "${@:2}"; do
-	commands+=(splitw -l 999 "ssh $destination" \;)
+	commands+=(splitw -l 999 "ssh $destination" \; selectl tiled \;)
 done
 
 exec tmux "${commands[@]}" \; selectl tiled \; setw synchronize-panes on
