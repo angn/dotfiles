@@ -29,7 +29,7 @@ if exists(':Plug')
   Plug 'mattn/vim-lsp-settings'
   Plug 'prabirshrestha/asyncomplete.vim'
   Plug 'prabirshrestha/asyncomplete-lsp.vim'
-  Plug 'jiangmiao/auto-pairs'
+  "Plug 'jiangmiao/auto-pairs'
   Plug 'bluz71/vim-mistfly-statusline'
 endif
 call plug#end()
