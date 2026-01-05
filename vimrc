@@ -79,7 +79,7 @@ nnoremap <c-l> <c-w>l
 
 nnoremap <f2> :w<cr>
 inoremap <f2> <c-o>:w<cr>
-nnoremap <f3> :if exists("t:NERDTreeBufName")\|NERDTreeFind\|else\|NERDTreeCWD\|endif<cr>
+nnoremap <f3> :if exists("t:NERDTreeBufName")&&bufwinnr(t:NERDTreeBufName)!=-1\|NERDTreeFind\|else\|NERDTreeCWD\|endif<cr>
 nnoremap <f4> :q<cr>
 nnoremap <f5> :Run<cr>
 nnoremap <f6> <c-^>
