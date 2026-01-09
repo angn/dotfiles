@@ -37,7 +37,7 @@ call plug#end()
 packadd! matchit
 
 set hidden ttyfast lazyredraw path=./**3
-set number relativenumber colorcolumn=81
+set cursorline number relativenumber colorcolumn=81
 set winheight=3 winminwidth=20 winwidth=80 noequalalways sidescrolloff=8
 set noswapfile fileformats=unix,dos encoding=utf-8 fileencodings=utf-8,cp949,latin1
 set autoindent smartindent noexpandtab tabstop=4 shiftwidth=4 softtabstop=0 shiftround
