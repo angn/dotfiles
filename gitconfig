@@ -3,29 +3,26 @@
 [pretty]
 	tree = format:%C(yellow)%h %Cgreen%an %Cblue%ar%Cred%d %Creset %s
 [alias]
+	aa = am --abort
+	ac = am --continue
 	ad = add -A
+	amend = commit --amend
 	ap = add -p
 	au = add -u
 	ba = branch -avv
 	bd = branch -D
 	bm = branch -m
 	br = branch
-	ca = commit -a
-	cam = commit -am
 	cb = checkout -b
-	cf = commit --fixup
 	ci = commit
 	cia = commit -a
 	ciam = commit -am
 	cim = commit -m
-	cm = commit -m
-	cma = commit -am
 	co = checkout
 	cp = checkout -p
 	dc = diff --cached -M -C -b
 	di = diff -M -C -b
 	dic = diff --cached -M -C -b
-	dl = show --name-status
 	dt = difftool
 	fix = commit --fixup HEAD
 	fp = fetch --all -t -p
@@ -36,16 +33,15 @@
 	mc = merge --continue
 	mt = mergetool
 	pick = cherry-pick --ff
-	re = rebase --autostash
 	rc = rebase --continue
 	ra = rebase --abort
 	ri = rebase -i --autostash
 	rh = reset --hard
 	rp = reset -p
 	rs = reset
-	rw = commit --amend -m
 	st = status -sb
 	up = pull --ff-only --all -t -p --autostash
+	wip = commit -m wip
 [push]
 	default = simple
 [core]
@@ -61,3 +57,5 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
+[url "ssh://git@github.daumkakao.com/"]
+    insteadOf = https://github.daumkakao.com/
