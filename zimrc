@@ -32,6 +32,7 @@ zmodule git-info
 
 zmodule prompt-pwd
 zmodule joke/zim-kubectl
+zmodule joke/zim-mise
 zmodule gitster
 zmodule https://github.com/agkozak/zsh-z
 
