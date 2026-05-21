@@ -13,3 +13,4 @@ curl -fsSLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent
 brew --version || curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
 brew install mise kube-ps1
 mise cfg set settings.idiomatic_version_file_enable_tools --type=list node,ruby
+mise use --global fzf rg k9s stern
