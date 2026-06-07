@@ -26,13 +26,14 @@ zmodule utility
 # Exposes to prompts how long the last command took to execute, used by asciiship.
 #zmodule duration-info
 # Exposes git repository status information to prompts, used by asciiship.
-zmodule git-info
+#zmodule git-info
 # A heavily reduced, ASCII-only version of the Spaceship and Starship prompts.
 #zmodule asciiship
 
 zmodule prompt-pwd
-zmodule joke/zim-kubectl
 zmodule joke/zim-mise
+zmodule joke/zim-kubectl
+zmodule joke/zim-k9s
 zmodule gitster
 zmodule https://github.com/agkozak/zsh-z
 
@@ -52,10 +53,10 @@ zmodule completion
 
 # Fish-like syntax highlighting for Zsh.
 # zsh-users/zsh-syntax-highlighting must be sourced after completion
-zmodule zsh-users/zsh-syntax-highlighting
+#zmodule zsh-users/zsh-syntax-highlighting
 # Fish-like history search (up arrow) for Zsh.
 # zsh-users/zsh-history-substring-search must be sourced after zsh-users/zsh-syntax-highlighting
-zmodule zsh-users/zsh-history-substring-search
+#zmodule zsh-users/zsh-history-substring-search
 # Fish-like autosuggestions for Zsh.
 zmodule zsh-users/zsh-autosuggestions
 # }}} End configuration added by Zim install
