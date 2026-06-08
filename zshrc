@@ -14,8 +14,6 @@ stern() {
 	command stern "$@"
 }
 
-source <(fzf --zsh)
-
 alias activate='source .venv/bin/activate'
 
 if command -v nerdctl &> /dev/null; then

@@ -37,6 +37,7 @@ zmodule joke/zim-kubectl
 zmodule joke/zim-k9s
 zmodule gitster
 zmodule https://github.com/agkozak/zsh-z
+zmodule fzf
 
 #
 # Completion
