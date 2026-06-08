@@ -30,14 +30,15 @@ zmodule utility
 # A heavily reduced, ASCII-only version of the Spaceship and Starship prompts.
 #zmodule asciiship
 
-zmodule homebrew
 zmodule prompt-pwd
+zmodule homebrew
 zmodule joke/zim-mise
 zmodule joke/zim-kubectl
 zmodule joke/zim-k9s
-zmodule gitster
 zmodule https://github.com/agkozak/zsh-z
 zmodule fzf
+#zmodule gitster
+zmodule sindresorhus/pure --source async.zsh --source pure.zsh
 
 #
 # Completion
