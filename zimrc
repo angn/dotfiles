@@ -30,6 +30,7 @@ zmodule utility
 # A heavily reduced, ASCII-only version of the Spaceship and Starship prompts.
 #zmodule asciiship
 
+zmodule homebrew
 zmodule prompt-pwd
 zmodule joke/zim-mise
 zmodule joke/zim-kubectl
