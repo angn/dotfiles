@@ -35,7 +35,7 @@
 	pick = cherry-pick --ff
 	rc = rebase --continue
 	ra = rebase --abort
-	ri = rebase -i --autostash
+	ri = rebase -i --autosquash --autostash
 	rh = reset --hard
 	rp = reset -p
 	rs = reset
