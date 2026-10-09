@@ -15,9 +15,6 @@
 	br = branch
 	cb = checkout -b
 	ci = commit
-	cia = commit -a
-	ciam = commit -am
-	cim = commit -m
 	co = checkout
 	cp = checkout -p
 	dc = diff --cached -M -C -b
@@ -33,16 +30,18 @@
 	mc = merge --continue
 	mt = mergetool
 	now = commit --amend --date=now --reset-author --no-edit
-	pick = cherry-pick --ff
-	rc = rebase --continue
+	pa = cherry-pick --abort
+	pc = cherry-pick --continue
+	pick = cherry-pick
 	ra = rebase --abort
-	ri = rebase -i --autosquash --autostash
+	rc = rebase --continue
 	rh = reset --hard
+	ri = rebase -i --autosquash --autostash
 	rp = reset -p
 	rs = reset
 	st = status -sb
-	view = show --ext-diff
 	up = pull --ff-only --all -t -p --autostash
+	view = show --ext-diff
 	wip = commit -m wip
 [push]
 	default = simple
