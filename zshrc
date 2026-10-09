@@ -29,6 +29,7 @@ alias krr='kubectl rollout restart'
 alias krs='kubectl rollout status'
 alias krun='kubectl run -it --rm --restart=Never --image-pull-policy=IfNotPresent --image=curlimages/curl curl-$RANDOM-$$ -- sh'
 alias keit='kubectl exec -it'
+alias kgfailed='kubectl get po -A --field-selector status.phase=Failed'
 # alias kgponode='kubectl get po -o wide -A --field-selector spec.nodeName='
 
 if command -v explorer.exe &> /dev/null; then
