@@ -32,6 +32,8 @@ alias keit='kubectl exec -it'
 alias kgfailed='kubectl get po -A --field-selector status.phase=Failed'
 # alias kgponode='kubectl get po -o wide -A --field-selector spec.nodeName='
 
+alias k9s='k9s --logoless --splashless'
+
 if command -v explorer.exe &> /dev/null; then
 	alias open=explorer.exe
 fi
